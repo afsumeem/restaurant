@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Vegetables Burger",
+    "subtitle": "Barbecue Italian cuisine Burger",
+    "image": "/src/assets/food-1.png"
+  },
+  {
+    "id": 2,
+    "title": "Spacial Pizza",
+    "subtitle": "Barbecue Italian cuisine pizza",
+    "image": "/src/assets/food-2.png"
+  },
+  {
+    "id": 3,
+    "title": "Spacial French fries",
+    "subtitle": "Barbecue Italian cuisine",
+    "image": "/src/assets/food-3.png"
+  },
+  {
+    "id": 4,
+    "title": "Cuisine Chicken",
+    "subtitle": "Japanese Cuisine Chicken",
+    "image": "/src/assets/food-4.png"
+  },
+  {
+    "id": 5,
+    "title": "Spacial Pizza",
+    "subtitle": "Barbecue Italian cuisine pizza",
+    "image": "/src/assets/food-2.png"
+  },
+  {
+    "id": 6,
+    "title": "Vegetables Burger",
+    "subtitle": "Barbecue Italian cuisine Burger",
+    "image": "/src/assets/food-1.png"
+  },
+  {
+    "id": 7,
+    "title": "Cuisine Chicken",
+    "subtitle": "Japanese Cuisine Chicken",
+    "image": "/src/assets/food-4.png"
+  },
+  {
+    "id": 8,
+    "title": "Spacial French fries",
+    "subtitle": "Barbecue Italian cuisine",
+    "image": "/src/assets/food-3.png"
+  }
+]
