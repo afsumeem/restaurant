@@ -11,8 +11,10 @@ const HeroSection = () => {
       >
         <div className="w-[1320px] h-[650px] flex mx-auto  mt-[108px]">
           <div className="  pt-24  z-10 h-[446px] w-[830px]">
+            {/* hero section content */}
+
             <div className={styles.heroSectionTitle}>
-              <h2 className="text-[120px] text-white-solid leading-[130px]">
+              <h2 className="text-[120px] text-white-solid leading-[130px] pt-5">
                 Taste the authentic <br /> Saudi cuisine
               </h2>
             </div>
@@ -23,6 +25,7 @@ const HeroSection = () => {
             </p>
             <button className="mt-10">Explore Menu</button>
           </div>
+
           {/* hero-section image */}
           <div className="relative -ml-52">
             <img
