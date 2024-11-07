@@ -4,7 +4,7 @@ import Header from "../shared/Header";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="max-w-full mx-auto">
       <Header />
       <Outlet />
       <Footer />

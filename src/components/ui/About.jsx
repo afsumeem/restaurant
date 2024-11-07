@@ -8,9 +8,9 @@ const About = () => {
         <div>
           {/* tab  */}
           <div>
-            <button>About</button>
-            <button>Experience</button>
-            <button>Contact</button>
+            <h5>About</h5>
+            <h5>Experience</h5>
+            <h5>Contact</h5>
           </div>
           <h3>Exceptional culinary experience and delicious food</h3>
           <p>
@@ -36,8 +36,8 @@ const About = () => {
             <img src="" alt="" />
           </div>
           <div>
-            <h5>Fast delivery</h5>
-            <p>Within 30 minutes</p>
+            <h4>Fast delivery</h4>
+            <h5>Within 30 minutes</h5>
           </div>
         </div>
         {/*  */}
@@ -46,8 +46,8 @@ const About = () => {
             <img src="" alt="" />
           </div>
           <div>
-            <h5>Absolute dining</h5>
-            <p>Best buffet restaurant</p>
+            <h4>Absolute dining</h4>
+            <h5>Best buffet restaurant</h5>
           </div>
         </div>
         {/*
@@ -57,8 +57,8 @@ const About = () => {
             <img src="" alt="" />
           </div>
           <div>
-            <h5>Pickup delivery</h5>
-            <p>Grab your food order</p>
+            <h4>Pickup delivery</h4>
+            <h5>Grab your food order</h5>
           </div>
         </div>
       </div>

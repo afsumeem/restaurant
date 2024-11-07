@@ -6,7 +6,7 @@ import Testimonial from "../components/ui/Testimonial";
 
 const Home = () => {
   return (
-    <div>
+    <div className="mx-auto">
       <HeroSection />
       <About />
       <PopularFoods />

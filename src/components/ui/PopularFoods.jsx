@@ -19,8 +19,8 @@ const PopularFoods = () => {
         {foods.map((food) => (
           <div key={food.id}>
             <img src={food.image} alt="" />
-            <h5>{food.title}</h5>
-            <p>{food.subtitle}</p>
+            <h4>{food.title}</h4>
+            <h5>{food.subtitle}</h5>
           </div>
         ))}
       </div>

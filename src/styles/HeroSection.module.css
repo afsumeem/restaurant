@@ -1,0 +1,28 @@
+.heroSectionTitle {
+  background: linear-gradient(
+    90deg,
+    rgba(189, 31, 23, 0) 32.88%,
+    rgba(189, 31, 23, 0.7) 100%
+  );
+}
+
+.hero {
+  background: linear-gradient(
+    123.4deg,
+    #bd1f17 40.8%,
+    #a61d13 76.4%,
+    #8e1b0f 120.69%
+  );
+  /* height: 1047px; */
+  /* width: 1920px; */
+  /* position: absolute;
+  top: 0;
+  z-index: -1; */
+}
+
+.hero2 {
+  background: url("/Rectangle4.png");
+  /* opacity: 12%; */
+  height: 1047px;
+  padding: 160px;
+}

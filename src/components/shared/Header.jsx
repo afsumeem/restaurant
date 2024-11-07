@@ -3,34 +3,23 @@ import { useState } from "react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className=" shadow-lg sticky top-0 w-full z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-800">Restaurant</h1>
+    <nav className=" shadow-lg sticky top-0 w-full z-1000 bg-inherit">
+      <div className="max-w-[1320px] mx-auto   ">
+        <div className="flex justify-between items-center h-[108px]">
+          <div className="flex items-center gap-2">
+            <img src="/src/assets/logo.svg" alt="" />
+            <h1 className="text-[28.44px] font-semibold">
+              Restau<span className="font-normal">rant</span>
+            </h1>
           </div>
           <div className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-600 hover:text-gray-800">
-              Home
-            </a>
-            <a href="#about" className="text-gray-600 hover:text-gray-800">
-              About
-            </a>
-            <a href="#portfolio" className="text-gray-600 hover:text-gray-800">
-              Portfolio
-            </a>
-            <a href="#clients" className="text-gray-600 hover:text-gray-800">
-              Clients
-            </a>
-            <a href="#blog" className="text-gray-600 hover:text-gray-800">
-              Blog
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-800">
-              Contact
-            </a>
-            <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-              Book a Table
-            </button>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#clients">Clients</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <button>Book a Table</button>
           </div>
           <div className="md:hidden flex items-center">
             <button
@@ -60,39 +49,25 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-4 pt-2 pb-3 space-y-1">
-            <a href="#home" className="block text-gray-600 hover:text-gray-800">
+            <a href="#home" className="block ">
               Home
             </a>
-            <a
-              href="#about"
-              className="block text-gray-600 hover:text-gray-800"
-            >
+            <a href="#about" className="block ">
               About
             </a>
-            <a
-              href="#portfolio"
-              className="block text-gray-600 hover:text-gray-800"
-            >
+            <a href="#portfolio" className="block ">
               Portfolio
             </a>
-            <a
-              href="#clients"
-              className="block text-gray-600 hover:text-gray-800"
-            >
+            <a href="#clients" className="block ">
               Clients
             </a>
-            <a href="#blog" className="block text-gray-600 hover:text-gray-800">
+            <a href="#blog" className="block  ">
               Blog
             </a>
-            <a
-              href="#contact"
-              className="block text-gray-600 hover:text-gray-800"
-            >
+            <a href="#contact" className="block">
               Contact
             </a>
-            <button className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-              Book a Table
-            </button>
+            <button>Book a Table</button>
           </div>
         </div>
       )}
