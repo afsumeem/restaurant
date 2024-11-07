@@ -4,6 +4,7 @@
     rgba(189, 31, 23, 0) 32.88%,
     rgba(189, 31, 23, 0.7) 100%
   );
+  height: 272px;
 }
 
 .hero {
@@ -13,16 +14,11 @@
     #a61d13 76.4%,
     #8e1b0f 120.69%
   );
-  /* height: 1047px; */
+  height: 1047px;
   /* width: 1920px; */
-  /* position: absolute;
-  top: 0;
-  z-index: -1; */
+  margin-top: -108px;
 }
 
 .hero2 {
   background: url("/Rectangle4.png");
-  /* opacity: 12%; */
-  height: 1047px;
-  padding: 160px;
 }

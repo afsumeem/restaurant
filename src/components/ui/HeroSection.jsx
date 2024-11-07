@@ -6,27 +6,29 @@ import offer from "/src/assets/offer.svg";
 const HeroSection = () => {
   return (
     <div className={styles.hero}>
-      <div className={styles.hero2}>
-        <div className="w-[1320px] h-[650px] flex mx-auto">
-          <div className="  pt-24  z-10 ">
+      <div
+        className={`h-[1047px] p-[160] ${styles.hero2} flex items-center justify-center`}
+      >
+        <div className="w-[1320px] h-[650px] flex mx-auto  mt-[108px]">
+          <div className="  pt-24  z-10 h-[446px] w-[830px]">
             <div className={styles.heroSectionTitle}>
-              <h2 className="text-[120px] text-white-solid">
+              <h2 className="text-[120px] text-white-solid leading-[130px]">
                 Taste the authentic <br /> Saudi cuisine
               </h2>
             </div>
 
-            <p className="text-white-solid font-normal text-2xl">
+            <p className="text-white-solid font-normal text-2xl w-[559px] mt-8 leading-8 ">
               Among the best Saudi chefs in the world, serving you something
               beyond flavor.
             </p>
-            <button>Explore Menu</button>
+            <button className="mt-10">Explore Menu</button>
           </div>
           {/* hero-section image */}
-          <div className="relative ">
+          <div className="relative -ml-52">
             <img
               src={heroImage}
               alt="hero-image "
-              className="rotate-360	w-[751px] h-[649px] "
+              className="rotate-360	w-[700px] h-[649px] "
             />
             <img
               src={star}
