@@ -8,6 +8,7 @@ export default {
         "orange-tab": "rgba(181, 43, 29, 1)",
         "dark-charcoal": "rgba(51, 51, 51, 1)",
         "about-title": "rgba(24, 24, 24, 1)",
+        secondaryColor: "rgba(10, 20, 37, 1)",
       },
     },
   },

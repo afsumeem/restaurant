@@ -1,6 +1,6 @@
 import aboutImage from "../../assets/about.png";
 import { useState } from "react";
-import { callAlt } from "../../assets/call.svg";
+import phoneImg from "../../assets/call.svg";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
@@ -66,10 +66,10 @@ const About = () => {
             <div className="transition-opacity duration-300">
               {activeTab === "about" && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-5xl lg:text-[62px] text-about-title leading-[56px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase">
+                  <h3 className="text-5xl lg:text-[62px] text-about-title leading-[56px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
                     Exceptional culinary experience and delicious food
                   </h3>
-                  <p className="text-dark-charcoal font-normal text-xl lg:text-base w-[330px] lg:w-[559px] leading-[26px] my-8">
+                  <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
                     odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
@@ -77,11 +77,13 @@ const About = () => {
                     incididunt ut labore et dolore magna minim veniam nostrud
                     exercitation.
                   </p>
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-8">
                     <button>About More</button>
                     <div className="flex items-center space-x-2">
-                      <img src={callAlt} alt="Phone Icon" className="h-6 w-6" />
-                      <p className="text-gray-700">+88 3426 739 485</p>
+                      <img src={phoneImg} alt="PhoneIcon" className="h-6 w-6" />
+                      <p className="text-secondaryColor text-[14px] lg:text-[18px] font-semibold">
+                        +88 3426 739 485
+                      </p>
                     </div>
                   </div>
                 </div>
