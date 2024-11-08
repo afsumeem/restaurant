@@ -156,7 +156,7 @@ const BookingForm = () => {
             <div>
               <textarea
                 name="Message"
-                rows="7"
+                rows="4"
                 onChange={handleChange}
                 placeholder="Message"
                 className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
@@ -164,7 +164,7 @@ const BookingForm = () => {
             </div>
 
             {/* book now btn */}
-            <button type="submit" className="mt-8">
+            <button type="submit" className=" mt-6 lg:mt-8">
               Book Now
             </button>
           </form>

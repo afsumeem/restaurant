@@ -41,9 +41,9 @@ const Testimonial = () => {
           <SliderNavigation />
           {reviews.map((review, index) => (
             <SwiperSlide key={index} className="">
-              <div className="w-[1320px] h-[555px] flex flex-col lg:flex-row-reverse bg-white-solid p-8 mx-auto">
+              <div className="w-[1320px] h-[555px] flex flex-col lg:flex-row-reverse bg-white-solid p-0 lg:p-8 mx-auto">
                 {/* video  */}
-                <div className="w-[763px] h-[555px]">
+                <div className="w-[330px] h-[240px] lg:w-[763px] lg:h-[555px]">
                   <iframe
                     width="100%"
                     height="100%"
@@ -55,19 +55,19 @@ const Testimonial = () => {
                 </div>
 
                 {/* content */}
-                <div className="bg-yellow-400 w-[556px] relative h-[555px] py-[71px] px-[85px] ">
+                <div className="bg-yellow-400 w-[330px] lg:w-[556px] relative h-[335px] lg:h-[555px] p-[25px] lg:py-[71px] lg:px-[85px] ">
                   <div className="relative h-full">
-                    <p className="review-quote text-[59.93px] mb-0 pb-0 absolute top-0 left-0">
+                    <p className="review-quote text-[59.93px] mb-0 pb-0 absolute -top-3 lg:top-0 left-0">
                       “
                     </p>
-                    <div className="ml-[26.26px] pt-10">
+                    <div className="ml-[19px] lg:ml-[26.26px] pt-5 lg:pt-10">
                       {/* customer comment */}
 
                       <p className="flex items-start text-lg lg:text-xl leading-7 lg:leading-[34px] text-secondary-color">
                         {review.comment}
                       </p>
 
-                      <div className="absolute bottom-0 w-full ">
+                      <div className="absolute bottom-0 w-full -ml-[20px] lg:ml-0">
                         {/* customer info */}
                         <div className="flex justify-between relative  border-b border-secondary-color pb-[18px]">
                           <div>
@@ -87,7 +87,7 @@ const Testimonial = () => {
                   <img
                     src={testimonialVector}
                     alt=""
-                    className="absolute left-0 bottom-[41.35px]"
+                    className="absolute left-0 -bottom-[8px] lg:bottom-[41.35px] w-[24px] h-[49px] lg:w-[39px] lg:h-[77px] "
                   />
                 </div>
               </div>
