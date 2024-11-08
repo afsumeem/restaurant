@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "../../styles/BookingForm.module.css";
 import calender from "../../assets/calender.svg";
+import Swal from "sweetalert2";
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -20,9 +21,25 @@ const BookingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Save form data to local storage
-    localStorage.setItem("bookingData", JSON.stringify(formData));
-    alert("Booking information saved successfully!");
+
+    // Show alert
+    Swal.fire({
+      position: "center-center",
+      icon: "success",
+      title: "Booking information ready to be saved!",
+      showConfirmButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Save data to local storage after user clicks "OK"
+        localStorage.setItem("bookingData", JSON.stringify(formData));
+        Swal.fire({
+          icon: "success",
+          title: " saved.",
+          showConfirmButton: false,
+          timer: 2000,
+        });
+      }
+    });
   };
 
   return (
@@ -53,6 +70,7 @@ const BookingForm = () => {
                 type="text"
                 name="name"
                 onChange={handleChange}
+                required
                 placeholder="Your Name*"
                 className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
               />
