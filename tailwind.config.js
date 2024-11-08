@@ -12,6 +12,7 @@ export default {
       },
       boxShadow: {
         "custom-light": "0px 7px 16px 0px rgba(0, 0, 0, 0.1)",
+        "navigation-arrow": "0px 0px 13.64px 0px rgba(0, 0, 0, 0.1);",
       },
     },
   },

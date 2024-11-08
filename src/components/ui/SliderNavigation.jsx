@@ -14,26 +14,26 @@ const SliderNavigation = () => {
   };
 
   return (
-    <div className="navigationContainer flex justify-end mx-auto mt-4 mb-5">
+    <div className="navigationContainer flex justify-end  gap-8">
       <button
         onClick={handlePrevClick}
-        className="bg-inherit w-[70px] h-[70px] rounded-full shadow-custom-light flex items-center justify-center lg:h-[90px] lg:w-[90px] "
+        className="bg-inherit w-[40px] h-[40px] rounded-full shadow-navigation-arrow flex items-center justify-center lg:h-[60px] lg:w-[60px] "
       >
         <img
           src={leftArrow}
           alt=""
-          className="h-[31px] w-[31px] lg:h-10 lg:w-10 bg-white-solid"
+          className="h-[7px] w-[12px] lg:h-11 lg:w-19 bg-white-solid"
         />
       </button>
 
       <button
         onClick={handleNextClick}
-        className="bg-inherit w-[70px] h-[70px] rounded-full shadow-custom-light flex items-center justify-center lg:h-[90px] lg:w-[90px] "
+        className="bg-inherit w-[40px] h-[40px] rounded-full shadow-navigation-arrow flex items-center justify-center lg:h-[60px] lg:w-[60px] "
       >
         <img
           src={rightArrow}
           alt=""
-          className="h-[31px] w-[31px] lg:h-10 lg:w-10 bg-white-solid"
+          className="h-[7px] w-[12px] lg:h-11 lg:w-19 bg-white-solid"
         />
       </button>
     </div>

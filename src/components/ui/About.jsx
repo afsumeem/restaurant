@@ -147,6 +147,8 @@ const About = () => {
           </div>
         </div>
 
+        {/*  */}
+
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           {/*  1*/}
           <div className="flex gap-x-4 items-center ">
