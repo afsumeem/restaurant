@@ -6,6 +6,7 @@
 @tailwind utilities;
 
 /* font families */
+
 a {
   font-family: "Raleway", sans-serif;
 }
@@ -25,6 +26,16 @@ h5 {
 p,
 button {
   font-family: "Roboto", sans-serif;
+}
+
+/*  */
+
+@font-face {
+  font-family: "cotoris-bold";
+  src: url("/public/font/CotorisBold.otf");
+}
+.review-quote {
+  font-family: "cotoris-bold";
 }
 
 /*  font-weight*/

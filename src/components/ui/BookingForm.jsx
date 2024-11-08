@@ -8,16 +8,23 @@ const BookingForm = () => {
     name: "",
     email: "",
     date: "",
-    people: "",
+    people: 1,
     message: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleChange = (value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      people: Math.max(1, prevData.people + value), // Prevent value from going below 1
+    }));
   };
+
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -107,13 +114,42 @@ const BookingForm = () => {
 
               {/* people */}
 
-              <input
+              {/* <input
                 type="number"
                 name="people"
                 onChange={handleChange}
                 placeholder="Total People*"
                 className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid outline-none"
-              />
+              /> */}
+
+              <div className="relative w-full">
+                <input
+                  type="number"
+                  name="people"
+                  value={formData.people}
+                  onChange={handleChange}
+                  placeholder="Total People*"
+                  className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid caret-white-solid outline-none"
+                  min="1"
+                />
+                {/* Up and down icons */}
+                <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex flex-col">
+                  <button
+                    type="button"
+                    onClick={() => handleChange(1)}
+                    className="bg-inherit text-white-solid hover:text-gray-400"
+                  >
+                    ▲
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleChange(-1)}
+                    className="bg-inherit text-white-solid hover:text-gray-400"
+                  >
+                    ▼
+                  </button>
+                </div>
+              </div>
             </div>
 
             {/* message box */}
