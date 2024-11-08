@@ -9,7 +9,7 @@ const HeroSection = () => {
       className={`h-[715px] lg:h-[1047px] -mt-[77px] lg:-mt-[108px] ${styles.hero}`}
     >
       <div
-        className={`h-full w-full px-[30px] py-8 lg:p-[160px] ${styles.hero2} flex items-center justify-center`}
+        className={`h-full w-full px-[30px] py-8 lg:py-[120px] lg:px-[300px] ${styles.hero2} flex items-center justify-center`}
       >
         <div className="w-[390px] lg:w-[1320px] h-[650px] flex flex-col lg:flex-row mx-auto mt-[77px] lg:mt-[108px] ">
           {/* hero section content */}
