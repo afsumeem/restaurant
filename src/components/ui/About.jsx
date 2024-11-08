@@ -12,7 +12,7 @@ const About = () => {
       <div className="w-[330px] lg:w-[1320px] mx-auto">
         {/* tab */}
 
-        <div className="flex flex-col lg:flex-row gap-[78px] mb-[120px]">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[78px] mb-[50px] lg:mb-[120px]">
           <div>
             <img
               src={aboutImage}
@@ -69,7 +69,7 @@ const About = () => {
             <div className="transition-opacity duration-300">
               {activeTab === "about" && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-5xl lg:text-[62px] text-about-title leading-[56px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+                  <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
                     Exceptional culinary experience and delicious food
                   </h3>
                   <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
@@ -95,7 +95,7 @@ const About = () => {
               {/*  */}
               {activeTab === "experience" && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-5xl lg:text-[62px] text-about-title leading-[56px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+                  <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
                     Exceptional culinary experience and delicious food
                   </h3>
                   <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
@@ -121,7 +121,7 @@ const About = () => {
               {/*  */}
               {activeTab === "contact" && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-5xl lg:text-[62px] text-about-title leading-[56px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+                  <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
                     Exceptional culinary experience and delicious food
                   </h3>
                   <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">

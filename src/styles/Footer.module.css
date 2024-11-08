@@ -1,0 +1,9 @@
+.footerSection {
+  background: url("../assets/footer.jpeg");
+  backdrop-filter: blur(6.5px);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footerSection2 {
+  background: rgba(0, 0, 0, 0.8);
+}
