@@ -14,11 +14,16 @@
     #a61d13 76.4%,
     #8e1b0f 120.69%
   );
-  height: 1047px;
-  /* width: 1920px; */
-  margin-top: -108px;
 }
 
 .hero2 {
   background: url("/Rectangle4.png");
+}
+
+/*  */
+@media (max-width: 768px) {
+  .heroSectionTitle {
+    background: none;
+    height: 112px;
+  }
 }

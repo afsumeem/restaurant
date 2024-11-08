@@ -7,12 +7,12 @@ const Header = () => {
   return (
     <nav className="sticky top-0 w-full z-10 bg-inherit px-[30px] md:px-0">
       <div className="max-w-[1320px] mx-auto   ">
-        <div className="flex basis-1/5 items-center justify-between md:justify-normal h-[108px] w-full">
+        <div className="flex basis-1/5 items-center justify-between md:justify-normal h-[77px] lg:h-[108px] w-full">
           {/* logo */}
 
           <div className="flex items-center  gap-2 mr-[60px]">
             <img src={logo} alt="" className="h-[37px] w-[37px]" />
-            <h1 className="text-[28.44px] font-semibold text-white-solid">
+            <h1 className="text-[28.44px] font-normal text-white-solid">
               Restau<span className="font-normal">rant</span>
             </h1>
           </div>
@@ -42,8 +42,10 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/*  */}
       {isOpen && (
-        <div className="md:hidden bg-inherit w-full ">
+        <div className="md:hidden bg-red-600 w-full ">
           <div className="px-4 pt-2 pb-3 space-y-1">
             <a href="#home" className="block ">
               Home
