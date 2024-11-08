@@ -1,6 +1,9 @@
 import aboutImage from "../../assets/about.png";
 import { useState } from "react";
 import phoneImg from "../../assets/call.svg";
+import deliveryImg from "../../assets/delivery.svg";
+import diningImg from "../../assets/dining.svg";
+import pickupImg from "../../assets/pickup.svg";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
@@ -81,7 +84,7 @@ const About = () => {
                     <button>About More</button>
                     <div className="flex items-center space-x-2">
                       <img src={phoneImg} alt="PhoneIcon" className="h-6 w-6" />
-                      <p className="text-secondaryColor text-[14px] lg:text-[18px] font-semibold">
+                      <p className="text-secondary-color text-[14px] lg:text-[18px] font-semibold">
                         +88 3426 739 485
                       </p>
                     </div>
@@ -92,24 +95,24 @@ const About = () => {
               {/*  */}
               {activeTab === "experience" && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold mb-4">
+                  <h3 className="text-5xl lg:text-[62px] text-about-title leading-[56px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
                     Exceptional culinary experience and delicious food
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Ornare non sed est cursus...
+                    Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
+                    odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
+                    sit amet consectetur adipiscing elit do eiusmod tempor
+                    incididunt ut labore et dolore magna minim veniam nostrud
+                    exercitation.
                   </p>
-                  <div className="flex items-center space-x-4">
-                    <button className="bg-yellow-500 text-white px-4 py-2 rounded">
-                      About More
-                    </button>
+                  <div className="flex items-center space-x-8">
+                    <button>About More</button>
                     <div className="flex items-center space-x-2">
-                      <img
-                        src="/path/to/phone-icon.svg"
-                        alt="Phone Icon"
-                        className="h-6 w-6"
-                      />
-                      <p className="text-gray-700">+88 3426 739 485</p>
+                      <img src={phoneImg} alt="PhoneIcon" className="h-6 w-6" />
+                      <p className="text-secondary-color text-[14px] lg:text-[18px] font-semibold">
+                        +88 3426 739 485
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -118,24 +121,24 @@ const About = () => {
               {/*  */}
               {activeTab === "contact" && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold mb-4">
+                  <h3 className="text-5xl lg:text-[62px] text-about-title leading-[56px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
                     Exceptional culinary experience and delicious food
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Ornare non sed est cursus...
+                    Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
+                    odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
+                    sit amet consectetur adipiscing elit do eiusmod tempor
+                    incididunt ut labore et dolore magna minim veniam nostrud
+                    exercitation.
                   </p>
-                  <div className="flex items-center space-x-4">
-                    <button className="bg-yellow-500 text-white px-4 py-2 rounded">
-                      About More
-                    </button>
+                  <div className="flex items-center space-x-8">
+                    <button>About More</button>
                     <div className="flex items-center space-x-2">
-                      <img
-                        src="/path/to/phone-icon.svg"
-                        alt="Phone Icon"
-                        className="h-6 w-6"
-                      />
-                      <p className="text-gray-700">+88 3426 739 485</p>
+                      <img src={phoneImg} alt="PhoneIcon" className="h-6 w-6" />
+                      <p className="text-secondary-color text-[14px] lg:text-[18px] font-semibold">
+                        +88 3426 739 485
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -144,36 +147,67 @@ const About = () => {
           </div>
         </div>
 
-        {/*  */}
-        <div>
-          <div>
-            <div>
-              <img src="" alt="" />
+        <div className="flex flex-col lg:flex-row justify-between gap-8">
+          {/*  1*/}
+          <div className="flex gap-x-4 items-center ">
+            <div className="w-[70px] h-[70px] rounded-full shadow-custom-light flex items-center justify-center lg:h-[90px] lg:w-[90px] ">
+              {/* image */}
+              <img
+                src={deliveryImg}
+                alt="fast-delivery-image"
+                className="h-[31px] w-[31px] lg:h-10 lg:w-10 bg-white-solid"
+              />
             </div>
+            {/* section content */}
             <div>
-              <h4>Fast delivery</h4>
-              <h5>Within 30 minutes</h5>
+              <h4 className="text-secondary-color text-2xl lg:text-[30px] leading-9">
+                Fast delivery
+              </h4>
+              <h5 className="text-secondary-color text-lg lg:text-xl leading-8 tracking-tighter">
+                Within 30 minutes
+              </h5>
             </div>
           </div>
-          {/*  */}
-          <div>
-            <div>
-              <img src="" alt="" />
+
+          {/* 2 */}
+          <div className="flex gap-x-4 items-center ">
+            <div className="w-[70px] h-[70px] rounded-full shadow-custom-light flex items-center justify-center lg:h-[90px] lg:w-[90px] ">
+              {/* image */}
+              <img
+                src={diningImg}
+                alt="absolute dining image"
+                className="h-[31px] w-[31px] lg:h-10 lg:w-10 bg-white-solid"
+              />
             </div>
+            {/* section-content */}
             <div>
-              <h4>Absolute dining</h4>
-              <h5>Best buffet restaurant</h5>
+              <h4 className="text-secondary-color text-2xl lg:text-[30px] leading-9">
+                Absolute dining
+              </h4>
+              <h5 className="text-secondary-color text-lg lg:text-xl leading-8 tracking-tighter">
+                Best buffet restaurant
+              </h5>
             </div>
           </div>
-          {/*
-           */}
-          <div>
-            <div>
-              <img src="" alt="" />
+
+          {/* 3 */}
+          <div className="flex gap-x-4 items-center ">
+            <div className="w-[70px] h-[70px] rounded-full shadow-custom-light flex items-center justify-center lg:h-[90px] lg:w-[90px] ">
+              {/* image */}
+              <img
+                src={pickupImg}
+                alt="pickup delivery image"
+                className="h-[31px] w-[31px] lg:h-10 lg:w-10 bg-white-solid"
+              />
             </div>
+            {/* section content */}
             <div>
-              <h4>Pickup delivery</h4>
-              <h5>Grab your food order</h5>
+              <h4 className="text-secondary-color text-2xl lg:text-[30px] leading-9">
+                Pickup delivery
+              </h4>
+              <h5 className="text-secondary-color text-lg lg:text-xl leading-8 tracking-tighter">
+                Grab your food order
+              </h5>
             </div>
           </div>
         </div>
