@@ -100,7 +100,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className=""
                 >
-                  <div className="border-[.83px] lg:border-[1.23px] border-footer-social-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
+                  <div className="border-[.83px] lg:border-[1.23px] border-white-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
                     <img
                       src={facebook}
                       alt=""
@@ -116,7 +116,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className=""
                 >
-                  <div className="border-[.83px] lg:border-[1.23px] border-footer-social-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
+                  <div className="border-[.83px] lg:border-[1.23px] border-white-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
                     <img
                       src={x}
                       alt=""
@@ -132,7 +132,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className=""
                 >
-                  <div className="border-[.83px] lg:border-[1.23px] border-footer-social-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
+                  <div className="border-[.83px] lg:border-[1.23px] border-white-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
                     <img
                       src={instagram}
                       alt=""
@@ -148,7 +148,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className=""
                 >
-                  <div className="border-[.83px] lg:border-[1.23px] border-footer-social-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
+                  <div className="border-[.83px] lg:border-[1.23px] border-white-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
                     <img
                       src={linkedIn}
                       alt=""
