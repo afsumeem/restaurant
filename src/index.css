@@ -31,11 +31,11 @@ button {
 /*  */
 
 @font-face {
-  font-family: "cotoris-bold";
-  src: url("/public/font/CotorisBold.otf");
+  /* font-family: "cotoris-bold"; */
+  /* src: url("/public/font/CotorisBold.otf"); */
 }
 .review-quote {
-  font-family: "cotoris-bold";
+  /* font-family: "cotoris-bold"; */
 }
 
 /*  font-weight*/
