@@ -4,23 +4,71 @@ import phoneImg from "../../assets/call.svg";
 import deliveryImg from "../../assets/delivery.svg";
 import diningImg from "../../assets/dining.svg";
 import pickupImg from "../../assets/pickup.svg";
+import aboutEllipse from "../../assets/aboutEllipse.svg";
+import aboutEllipse2 from "../../assets/aboutEllipse2.svg";
+import aboutEllipse3 from "../../assets/aboutEllipse3.svg";
+import sectionBG from "../../assets/section-bg.png";
+
+//
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
   return (
-    <div className="h-[1144px] lg:h-[864px] px-8 lg:px-[300px] py-[30px] lg:py-[120px]">
+    <div className="h-[1144px] lg:h-[864px] px-8 lg:px-[300px] py-[30px] lg:py-[120px] relative">
+      <div
+        className="absolute right-0 bottom-10 h-[340px] w-[363px]   "
+        style={
+          {
+            // clipPath: "inset(0 55% 0 0)",
+          }
+        }
+      >
+        <img
+          src={sectionBG}
+          alt=""
+          className="h-[255px] -rotate-[24deg] "
+          style={{
+            clipPath: "polygon(0 0, 55% 0, 14% 100%, 0% 100%)",
+          }}
+        />
+      </div>
+
       <div className="w-[330px] lg:w-[1320px] mx-auto">
         {/* tab */}
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[78px] mb-[50px] lg:mb-[120px]">
-          <div>
+          <div className="relative">
             <img
               src={aboutImage}
               alt=""
               className="w-[330px] h-[246px] md:w-full lg:w-[617px] lg:h-[460px]"
             />
-            <div>
-              <h6>Market Experiences</h6>
+            <div className="absolute top-[30px] left-6 bg-white-solid rounded-[20px] w-[128px] h-[73px] lg:w-[241px] lg:h-[136px] flex justify-between items-center gap-[5px] lg:gap-3 p-[11px] lg:p-[22px]">
+              <div className="ml-[22px]">
+                <img
+                  src={aboutEllipse}
+                  alt=""
+                  className="absolute top-[14px] lg:top-6 left-[12px] lg:left-[22px] w-50px h-[50px] lg:h-[94px] lg:w-[94px]"
+                />
+                <img
+                  src={aboutEllipse2}
+                  alt=""
+                  className="absolute top-[14px] lg:top-6 left-[12px] lg:left-[22px] w-50px h-[50px] lg:h-[94px] lg:w-[94px]"
+                />
+                <img
+                  src={aboutEllipse3}
+                  alt=""
+                  className="absolute top-5 lg:top-9 left-[14px] lg:left-[26px] w-[9px] h-[9px] lg:w-4 lg:h-4"
+                />
+                <h3 className="text-[14px] lg:text-[26px] font-medium absolute top-[30px] lg:top-[52px] left-[30px] lg:left-14">
+                  50+
+                </h3>
+              </div>
+
+              {/*  */}
+              <h6 className="text-[8.5px] lg:text-base leading-[12px] lg:leading-[23px] text-about-title font-semibold">
+                Market <br /> Experiences
+              </h6>
             </div>
           </div>
 

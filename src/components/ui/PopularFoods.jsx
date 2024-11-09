@@ -11,6 +11,7 @@ import SliderNavigation from "./SliderNavigation";
 
 const PopularFoods = () => {
   const [foods, setFoods] = useState([]);
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   // fetch food data
   useEffect(() => {
@@ -27,19 +28,24 @@ const PopularFoods = () => {
       <div className="w-[330px] lg:w-[1320px] mx-auto relative">
         {/* section title */}
 
-        <div className=" mb-[60px]">
-          <p className="section-subtitle text-base lg:text-xl leading-[26px] lg:leading-8">
-            Crispy, Every Bite Taste
-          </p>
+        <div className="flex items-center justify-between mb-[30px] lg:mb-[60px]">
+          <div className=" ">
+            <p className="section-subtitle text-base lg:text-xl leading-[26px] lg:leading-8">
+              Crispy, Every Bite Taste
+            </p>
 
-          <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
-            POPULAR FOOD ITEMS
-          </h3>
+            <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+              POPULAR FOOD ITEMS
+            </h3>
+          </div>
+          <div className="hidden lg:block">
+            <SliderNavigation swiper={swiperInstance} />
+          </div>
         </div>
-
         {/*  popular food carousel*/}
 
         <Swiper
+          onSwiper={setSwiperInstance}
           loop={true}
           modules={[Navigation]}
           spaceBetween={30}
@@ -63,7 +69,7 @@ const PopularFoods = () => {
           }}
           className="mySwiper "
         >
-          <SliderNavigation />
+          {/* <SliderNavigation /> */}
           {foods.map((food, index) => (
             <SwiperSlide key={index} className="">
               <div className="w-[306px] h-[300px] bg-white-solid p-8 mx-auto">
@@ -74,6 +80,11 @@ const PopularFoods = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Display navigation below the slider on small screens */}
+        <div className="block lg:hidden mt-4">
+          <SliderNavigation swiper={swiperInstance} />
+        </div>
       </div>
     </div>
   );

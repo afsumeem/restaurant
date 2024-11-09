@@ -1,20 +1,23 @@
-import { useSwiper } from "swiper/react";
+/* eslint-disable react/prop-types */
+// import { useSwiper } from "swiper/react";
 import leftArrow from "../../assets/leftArrow.svg";
 import rightArrow from "../../assets/rightArrow.svg";
 
-const SliderNavigation = () => {
-  const swiper = useSwiper();
+const SliderNavigation = ({ swiper }) => {
+  // const swiper = useSwiper();
 
   const handlePrevClick = () => {
-    swiper.slidePrev();
+    if (swiper) {
+      swiper.slidePrev();
+    }
   };
 
   const handleNextClick = () => {
-    swiper.slideNext();
+    if (swiper) swiper.slideNext();
   };
 
   return (
-    <div className="navigationContainer flex gap-8 my-6 justify-center mx-auto mt-4">
+    <div className="navigationContainer flex gap-8 my-6 justify-center mx-auto mt-4 ">
       {/* prev arrow */}
 
       <button
