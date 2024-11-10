@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import SliderNavigation from "./SliderNavigation";
 
 //
@@ -60,7 +60,12 @@ const PopularFoods = () => {
         <Swiper
           onSwiper={setSwiperInstance}
           loop={true}
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
+          autoplay={{
+            delay: 500,
+            disableOnInteraction: false,
+          }}
+          speed={1500}
           spaceBetween={30}
           breakpoints={{
             640: {

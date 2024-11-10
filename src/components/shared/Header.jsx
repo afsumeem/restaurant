@@ -32,8 +32,8 @@ const Header = () => {
 
           <a href="/" className="flex items-center  gap-2 mr-[60px]">
             <img src={logo} alt="" className="h-[37px] w-[37px]" />
-            <p className="text-[28.44px] font-bold text-white-solid siteLogo">
-              Restau<span className="font-normal">rant</span>
+            <p className="text-[28.44px] font-medium text-white-solid siteLogo">
+              Restau<span className="font-light">rant</span>
             </p>
           </a>
 

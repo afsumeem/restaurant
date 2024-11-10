@@ -19,8 +19,6 @@ const Testimonial = () => {
       .then((data) => setReviews(data));
   }, []);
 
-  // -rotate-[87deg]
-
   return (
     <div className="h-auto lg:h-[965px] py-[30px] lg:py-[120px] relative overflow-hidden">
       {/* section-bg */}
@@ -71,7 +69,6 @@ const Testimonial = () => {
           onSwiper={setSwiperInstance}
           loop={true}
           modules={[Navigation]}
-          // spaceBetween={30}
           slidesPerView={1}
           className="mySwiper "
         >
@@ -84,7 +81,6 @@ const Testimonial = () => {
                     width="100%"
                     height="100%"
                     src={`https://www.youtube.com/embed/${review.videoId}`}
-                    // frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>

@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "../../styles/BookingForm.module.css";
 import calender from "../../assets/calender.svg";
 import Swal from "sweetalert2";
+import { TbCaretUp } from "react-icons/tb";
+import { TbCaretDown } from "react-icons/tb";
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -12,18 +14,25 @@ const BookingForm = () => {
     message: "",
   });
 
-  // const handleChange = (value) => {
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     people: Math.max(1, prevData.people + value),
-  //   }));
-  // };
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+  //
+  const incrementPeople = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      people: prevData.people ? parseInt(prevData.people) + 1 : 1,
+    }));
+  };
+
+  const decrementPeople = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      people: prevData.people > 1 ? parseInt(prevData.people) - 1 : 1,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -39,6 +48,16 @@ const BookingForm = () => {
       if (result.isConfirmed) {
         // Save data to local storage after user clicks "OK"
         localStorage.setItem("bookingData", JSON.stringify(formData));
+
+        // Clear the form after saving the data
+        setFormData({
+          name: "",
+          email: "",
+          date: "",
+          people: "",
+          message: "",
+        });
+
         Swal.fire({
           icon: "success",
           title: " saved.",
@@ -77,6 +96,7 @@ const BookingForm = () => {
               <input
                 type="text"
                 name="name"
+                value={formData.name}
                 onChange={handleChange}
                 // required
                 placeholder="Your Name *"
@@ -87,6 +107,7 @@ const BookingForm = () => {
               <input
                 type="email"
                 name="email"
+                value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
                 className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
@@ -100,6 +121,7 @@ const BookingForm = () => {
                 <input
                   type="date"
                   name="date"
+                  value={formData.date}
                   onChange={handleChange}
                   placeholder="Reservation Date"
                   className="border border-white-border w-full bg-inherit py-3 px-4 caret-white-solid outline-none text-white-solid appearance-none"
@@ -115,49 +137,42 @@ const BookingForm = () => {
 
               {/* people */}
 
-              {/* <input
-                type="number"
-                name="people"
-                onChange={handleChange}
-                placeholder="Total People*"
-                className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid outline-none"
-              /> */}
-
               <div className="relative w-full">
                 <input
                   type="number"
                   name="people"
-                  // value={formData.people}
+                  value={formData.people}
                   onChange={handleChange}
-                  placeholder="Total People*"
+                  placeholder="Total People"
                   className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid caret-white-solid outline-none"
                   min="1"
                 />
                 {/* Up and down icons */}
-                {/* <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex flex-col">
+                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col">
                   <button
                     type="button"
-                    onClick={() => handleChange(1)}
-                    className="bg-inherit text-white-solid hover:text-gray-400"
+                    onClick={incrementPeople}
+                    className="bg-inherit text-white-solid hover:text-gray-400 p-0"
                   >
-                    ▲
+                    <TbCaretUp className="text-xl mt-1" />
                   </button>
                   <button
                     type="button"
-                    onClick={() => handleChange(-1)}
-                    className="bg-inherit text-white-solid hover:text-gray-400"
+                    onClick={decrementPeople}
+                    className="bg-inherit text-white-solid hover:text-gray-400 p-0"
                   >
-                    ▼
+                    <TbCaretDown className="text-xl -mt-3" />
                   </button>
-                </div> */}
+                </div>
               </div>
             </div>
 
             {/* message box */}
             <div>
               <textarea
-                name="Message"
+                name="message"
                 rows="4"
+                value={formData.message}
                 onChange={handleChange}
                 placeholder="Message"
                 className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"

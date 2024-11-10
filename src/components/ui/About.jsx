@@ -33,7 +33,7 @@ const About = () => {
             <img
               src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246751/restaurant/about_opijdn.png"
               alt="about-image"
-              className="w-[330px] h-[246px] md:w-full lg:w-[617px] lg:h-[460px]"
+              className="w-[330px] h-[246px] md:w-full lg:min-w-[617px] lg:h-[460px]"
             />
             <div className="absolute top-[30px] left-6 bg-white-solid rounded-[20px] w-[128px] h-[73px] lg:w-[241px] lg:h-[136px] flex justify-between items-center gap-[5px] lg:gap-3 p-[11px] lg:p-[22px]">
               <div className="ml-[22px]">
@@ -64,7 +64,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className=" mx-auto mt-8">
+          <div className=" mt-8">
             {/* Tab Buttons */}
             <div className="flex justify-start space-x-6 mb-6 border-b border-orange-tab">
               {/* about btn */}
@@ -113,12 +113,10 @@ const About = () => {
                     Exceptional culinary experience and delicious food
                   </h3>
                   <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
-                    odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
-                    sit amet consectetur adipiscing elit do eiusmod tempor
-                    incididunt ut labore et dolore magna minim veniam nostrud
-                    exercitation.
+                    Our restaurant brings the essence of fine dining and a cozy
+                    atmosphere, where culinary art meets exceptional service.
+                    Each dish is crafted with locally-sourced ingredients and
+                    inspired by both traditional and contemporary recipes.
                   </p>
                   <div className="flex items-center space-x-8">
                     <button>About More</button>
@@ -136,18 +134,19 @@ const About = () => {
               {activeTab === "experience" && (
                 <div className="animate-fadeIn">
                   <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
-                    Exceptional culinary experience and delicious food
+                    Our Culinary Journey
                   </h3>
                   <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
-                    odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
-                    sit amet consectetur adipiscing elit do eiusmod tempor
-                    incididunt ut labore et dolore magna minim veniam nostrud
-                    exercitation.
+                    Experience the artistry and passion of our chefs, bringing
+                    flavors from around the world to your plate. Each dish is
+                    crafted with precision and care, providing a memorable
+                    dining experience. Experience the artistry and passion of
+                    our chefs, bringing flavors from around the world to your
+                    plate. Each dish is crafted with precision and care,
+                    providing a memorable dining experience.
                   </p>
                   <div className="flex items-center space-x-8">
-                    <button>About More</button>
+                    <button>Learn More</button>
                     <div className="flex items-center space-x-2">
                       <img src={phoneImg} alt="PhoneIcon" className="h-6 w-6" />
                       <p className="text-secondary-color text-[14px] lg:text-[18px] font-semibold">
@@ -162,18 +161,18 @@ const About = () => {
               {activeTab === "contact" && (
                 <div className="animate-fadeIn">
                   <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
-                    Exceptional culinary experience and delicious food
+                    Get in Touch with Us
                   </h3>
                   <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
-                    odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
-                    sit amet consectetur adipiscing elit do eiusmod tempor
-                    incididunt ut labore et dolore magna minim veniam nostrud
-                    exercitation.
+                    We’d love to hear from you! Whether you have questions about
+                    our menu, reservations, or special events, our team is here
+                    to help. Reach out to us and we’ll be in touch shortly. We’d
+                    love to hear from you! Whether you have questions about our
+                    menu, reservations, or special events, our team is here to
+                    help. Reach out to us and we’ll be in touch shortly.
                   </p>
                   <div className="flex items-center space-x-8">
-                    <button>About More</button>
+                    <button>Contact Us</button>
                     <div className="flex items-center space-x-2">
                       <img src={phoneImg} alt="PhoneIcon" className="h-6 w-6" />
                       <p className="text-secondary-color text-[14px] lg:text-[18px] font-semibold">
