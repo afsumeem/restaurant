@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className={`${styles.footerSection} `}>
       <div
-        className={`${styles.footerSection2} h-[999px] lg:h-[719px] px-8 lg:px-[300px] py-[30px] lg:py-[120px]`}
+        className={`${styles.footerSection2} h-auto lg:h-[719px]  py-[30px] lg:py-[120px]`}
       >
         <div className="w-[330px] lg:w-[1320px] mx-auto">
           {/* section title */}

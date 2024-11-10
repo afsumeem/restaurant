@@ -10,17 +10,17 @@ const Header = () => {
         <div className="flex basis-1/5 items-center justify-between md:justify-normal h-[77px] lg:h-[108px] w-full">
           {/* logo */}
 
-          <div className="flex items-center  gap-2 mr-[60px]">
+          <a href="/" className="flex items-center  gap-2 mr-[60px]">
             <img src={logo} alt="" className="h-[37px] w-[37px]" />
-            <h1 className="text-[28.44px] font-normal text-white-solid">
+            <p className="text-[28.44px] font-bold text-white-solid siteLogo">
               Restau<span className="font-normal">rant</span>
-            </h1>
-          </div>
+            </p>
+          </a>
 
           {/* nav items */}
           <div className="hidden basis-4/5  md:flex justify-between space-x-8 items-center  ">
             <div className="flex space-x-8">
-              <a href="#home">Home</a>
+              <a href="/">Home</a>
               <a href="#about">About</a>
               <a href="#portfolio">Portfolio</a>
               <a href="#clients">Clients</a>
@@ -31,7 +31,7 @@ const Header = () => {
             <button className="">Book a Table</button>
           </div>
 
-          {/* hamburger */}
+          {/* hamburger for small device*/}
           <div className="md:hidden flex items-center ">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -47,7 +47,7 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-red-600 w-full ">
           <div className="px-4 pt-2 pb-3 space-y-1">
-            <a href="#home" className="block ">
+            <a href="/" className="block ">
               Home
             </a>
             <a href="#about" className="block ">

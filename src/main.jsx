@@ -7,6 +7,7 @@ import Layout from "./components/layout/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+// create page routes
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+//
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

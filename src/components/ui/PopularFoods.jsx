@@ -23,7 +23,7 @@ const PopularFoods = () => {
   //
   return (
     <div
-      className={`${styles.popularFoodSection} h-[532px] lg:h-[710px] px-8 lg:px-[300px] py-[30px] lg:py-[120px]`}
+      className={`${styles.popularFoodSection} h-auto lg:h-[710px] py-[30px] lg:py-[120px]`}
     >
       <div className="w-[330px] lg:w-[1320px] mx-auto relative">
         {/* section title */}

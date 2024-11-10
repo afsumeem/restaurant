@@ -7,13 +7,7 @@
 
 /* font families */
 
-a {
-  font-family: "Raleway", sans-serif;
-}
-h1 {
-  font-family: "Poppins", sans-serif;
-}
-
+h1,
 h2,
 h3,
 h4 {
@@ -23,19 +17,28 @@ h4 {
 h5 {
   font-family: "Inter", sans-serif;
 }
+
+a {
+  font-family: "Raleway", sans-serif;
+}
+
 p,
 button {
   font-family: "Roboto", sans-serif;
 }
 
+.siteLogo {
+  font-family: "Poppins", sans-serif;
+}
+
 /*  */
 
 @font-face {
-  /* font-family: "cotoris-bold"; */
-  /* src: url("/public/font/CotorisBold.otf"); */
+  font-family: "cotoris-bold";
+  src: url("/font/CotorisBold.otf");
 }
 .review-quote {
-  /* font-family: "cotoris-bold"; */
+  font-family: "cotoris-bold";
 }
 
 /*  font-weight*/

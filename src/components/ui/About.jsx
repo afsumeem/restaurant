@@ -14,18 +14,12 @@ import sectionBG from "../../assets/section-bg.png";
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
   return (
-    <div className="h-[1144px] lg:h-[864px] px-8 lg:px-[300px] py-[30px] lg:py-[120px] relative">
-      <div
-        className="absolute right-0 bottom-10 h-[340px] w-[363px]   "
-        style={
-          {
-            // clipPath: "inset(0 55% 0 0)",
-          }
-        }
-      >
+    <div className="w-full h-auto lg:h-[864px]  py-[30px] lg:py-[120px] relative overflow-hidden">
+      {/* section-bg */}
+      <div className="absolute -right-[180px] bottom-20   hidden lg:block">
         <img
           src={sectionBG}
-          alt=""
+          alt="section-bg"
           className="h-[255px] -rotate-[24deg] "
           style={{
             clipPath: "polygon(0 0, 55% 0, 14% 100%, 0% 100%)",

@@ -18,7 +18,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div className="h-[861px] lg:h-[965px] px-8 lg:px-[300px] py-[30px] lg:py-[120px]">
+    <div className="h-auto lg:h-[965px] py-[30px] lg:py-[120px]">
       <div className="w-[330px] lg:w-[1320px] mx-auto relative">
         {/* section title */}
         <div>
