@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { Navigation } from "swiper/modules";
 import SliderNavigation from "./SliderNavigation";
+import sectionBG from "../../assets/section-bg.png";
 
 //
 
@@ -23,9 +24,22 @@ const PopularFoods = () => {
   //
   return (
     <div
-      className={`${styles.popularFoodSection} h-auto lg:h-[710px] py-[30px] lg:py-[120px]`}
+      className={`${styles.popularFoodSection} h-auto lg:h-[710px]  py-[30px] lg:py-[120px] relative overflow-hidden`}
     >
-      <div className="w-[330px] lg:w-[1320px] mx-auto relative">
+      {/* section-bg */}
+      <div className="absolute -left-[190px] bottom-20 hidden lg:block">
+        <img
+          src={sectionBG}
+          alt="section-bg"
+          className="h-[255px] -rotate-[72deg]"
+          style={{
+            clipPath: "polygon(82% 51%, 8% 100%, 100% 100%)",
+          }}
+        />
+      </div>
+
+      {/*  w-[330px] lg:w-[1320px]*/}
+      <div className=" mx-auto relative">
         {/* section title */}
 
         <div className="flex items-center justify-between mb-[30px] lg:mb-[60px]">
@@ -62,6 +76,7 @@ const PopularFoods = () => {
               slidesPerView: 3,
               spaceBetween: 30,
             },
+
             1280: {
               slidesPerView: 4,
               spaceBetween: 30,

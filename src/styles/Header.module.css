@@ -1,0 +1,5 @@
+.navbarBG {
+  background: rgba(189, 31, 23, 0.95);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(20px);
+}

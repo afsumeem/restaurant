@@ -6,6 +6,8 @@ import { Navigation } from "swiper/modules";
 import SliderNavigation from "./SliderNavigation";
 import { useEffect, useState } from "react";
 import testimonialVector from "../../assets/testimonial-vector.svg";
+import sectionBG from "../../assets/sectionbg-2.png";
+import sectionBG3 from "../../assets/sectionbg3.png";
 
 const Testimonial = () => {
   const [reviews, setReviews] = useState([]);
@@ -17,8 +19,37 @@ const Testimonial = () => {
       .then((data) => setReviews(data));
   }, []);
 
+  // -rotate-[87deg]
+
   return (
-    <div className="h-auto lg:h-[965px] py-[30px] lg:py-[120px]">
+    <div className="h-auto lg:h-[965px] py-[30px] lg:py-[120px] relative overflow-hidden">
+      {/* section-bg */}
+
+      <div className="absolute -left-[130px] top-40 hidden lg:block">
+        <img
+          src={sectionBG}
+          alt="section-bg"
+          className="h-[255px] -rotate-[87deg]"
+          style={{
+            clipPath: "inset(48% 0 0 0)",
+          }}
+        />
+      </div>
+
+      {/*  section bg 2   */}
+
+      <div className="absolute  bottom-44 -right-44  hidden lg:block">
+        <img
+          src={sectionBG3}
+          alt="section-bg"
+          className="w-[566px] h-[303px] rotate-[34.7deg]"
+          style={{
+            clipPath: "polygon(0 0, 61% 33%, 80% 72%, 90% 95%, 0 100%, 0% 50%)",
+          }}
+        />
+      </div>
+
+      {/*  */}
       <div className="w-[330px] lg:w-[1320px] mx-auto relative">
         {/* section title */}
         <div>

@@ -7,14 +7,14 @@ import facebook from "../../assets/facebook.svg";
 import x from "../../assets/x.svg";
 import instagram from "../../assets/instagram.svg";
 import linkedIn from "../../assets/linkedIn.svg";
-
+// w-[330px] lg:w-[1320px]
 const Footer = () => {
   return (
     <div className={`${styles.footerSection} `}>
       <div
-        className={`${styles.footerSection2} h-auto lg:h-[719px]  py-[30px] lg:py-[120px]`}
+        className={`${styles.footerSection2} w-full h-auto lg:h-[719px] px-[30px] lg:px-[300px] py-[30px] lg:py-[120px]`}
       >
-        <div className="w-[330px] lg:w-[1320px] mx-auto">
+        <div className="mx-auto">
           {/* section title */}
           <h3 className="text-[40px] lg:text-[62px] text-white-solid leading-[48px] lg:leading-[62px]  font-medium uppercase text-center mb-12">
             We ready to have you the best dining experiences
