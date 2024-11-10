@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "../../styles/Testimonial.module.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
@@ -9,6 +10,7 @@ import testimonialVector from "../../assets/testimonial-vector.svg";
 
 const Testimonial = () => {
   const [reviews, setReviews] = useState([]);
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   // fetch customer review data
   useEffect(() => {
@@ -50,27 +52,32 @@ const Testimonial = () => {
       {/*  */}
       <div className="w-[330px] lg:w-[1320px] mx-auto relative">
         {/* section title */}
-        <div>
-          <p className="section-subtitle text-base lg:text-xl leading-[26px] lg:leading-8">
-            Crispy, Every Bite Taste
-          </p>
-          <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
-            What Some of my Customers Say
-          </h3>
+        <div className="flex items-center justify-between mb-[30px] lg:mb-[60px]">
+          <div>
+            <p className="section-subtitle text-base lg:text-xl leading-[26px] lg:leading-8">
+              Crispy, Every Bite Taste
+            </p>
+            <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+              What Some of my Customers Say
+            </h3>
+          </div>
+          <div className="hidden lg:block">
+            <SliderNavigation swiper={swiperInstance} />
+          </div>
         </div>
 
         {/* section content */}
         <Swiper
+          onSwiper={setSwiperInstance}
           loop={true}
           modules={[Navigation]}
           // spaceBetween={30}
           slidesPerView={1}
           className="mySwiper "
         >
-          <SliderNavigation />
           {reviews.map((review, index) => (
             <SwiperSlide key={index} className="">
-              <div className="w-[1320px] h-[555px] flex flex-col lg:flex-row-reverse bg-white-solid p-0 lg:p-8 mx-auto">
+              <div className="w-[1320px] h-[555px] flex flex-col lg:flex-row-reverse bg-white-solid p-0  my-0 lg:my-8 mx-auto">
                 {/* video  */}
                 <div className="w-[330px] h-[240px] lg:w-[763px] lg:h-[555px]">
                   <iframe
@@ -84,7 +91,9 @@ const Testimonial = () => {
                 </div>
 
                 {/* content */}
-                <div className="bg-yellow-400 w-[330px] lg:w-[556px] relative h-[335px] lg:h-[555px] p-[25px] lg:py-[71px] lg:px-[85px] ">
+                <div
+                  className={`w-[330px] lg:w-[556px] relative h-[335px] lg:h-[555px] p-[25px] lg:py-[71px] lg:px-[85px] ${styles.testimonialContentBg}`}
+                >
                   <div className="relative h-full">
                     <p className="review-quote text-[59.93px] mb-0 pb-0 absolute -top-3 lg:top-0 left-0">
                       “
@@ -123,6 +132,10 @@ const Testimonial = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        {/*  navigation on small screens */}
+        <div className="block lg:hidden mt-4">
+          <SliderNavigation swiper={swiperInstance} />
+        </div>
       </div>
     </div>
   );

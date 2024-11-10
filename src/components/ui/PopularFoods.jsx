@@ -37,8 +37,8 @@ const PopularFoods = () => {
         />
       </div>
 
-      {/*  w-[330px] lg:w-[1320px]*/}
-      <div className=" mx-auto relative">
+      {/*  */}
+      <div className="w-[330px] lg:w-[1320px] mx-auto relative">
         {/* section title */}
 
         <div className="flex items-center justify-between mb-[30px] lg:mb-[60px]">
@@ -83,19 +83,27 @@ const PopularFoods = () => {
           }}
           className="mySwiper "
         >
-          {/* <SliderNavigation /> */}
           {foods.map((food, index) => (
             <SwiperSlide key={index} className="">
               <div className="w-[306px] h-[300px] bg-white-solid p-8 mx-auto">
-                <img src={food.image} alt="" className="mx-auto" />
-                <h4 className="text-center">{food.title}</h4>
-                <h5 className="text-center">{food.subtitle}</h5>
+                <img
+                  src={food.image}
+                  alt="food-image"
+                  className="mx-auto w-[186px] h-[124px]"
+                />
+                <div className=" w-[57px] mx-auto h-1 my-6 bg-border-focus"></div>
+                <h4 className="text-secondary-color text-2xl ] leading-9 text-center">
+                  {food.title}
+                </h4>
+                <h5 className="text-center text-secondary-color text-base  leading-8 tracking-tighter">
+                  {food.subtitle}
+                </h5>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Display navigation below the slider on small screens */}
+        {/* navigation on small screens */}
         <div className="block lg:hidden mt-4">
           <SliderNavigation swiper={swiperInstance} />
         </div>

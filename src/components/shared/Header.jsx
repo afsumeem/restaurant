@@ -48,7 +48,9 @@ const Header = () => {
               <a href="#contact">Contact</a>
             </div>
 
-            <button className="">Book a Table</button>
+            <a href="#book-a-table">
+              <button onClick={() => setIsOpen(false)}>Book a Table</button>
+            </a>
           </div>
 
           {/* hamburger for small device*/}
@@ -119,7 +121,9 @@ const Header = () => {
               <a href="#contact" onClick={() => setIsOpen(false)}>
                 Contact
               </a>
-              <button onClick={() => setIsOpen(false)}>Book a Table</button>
+              <a href="#book-a-table">
+                <button onClick={() => setIsOpen(false)}>Book a Table</button>
+              </a>
             </div>
           </div>
         </div>

@@ -8,23 +8,23 @@ const BookingForm = () => {
     name: "",
     email: "",
     date: "",
-    people: 1,
+    people: "",
     message: "",
   });
 
-  const handleChange = (value) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      people: Math.max(1, prevData.people + value), // Prevent value from going below 1
-    }));
-  };
-
-  // const handleChange = (e) => {
-  //   setFormData({
-  //     ...formData,
-  //     [e.target.name]: e.target.value,
-  //   });
+  // const handleChange = (value) => {
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     people: Math.max(1, prevData.people + value),
+  //   }));
   // };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -51,6 +51,7 @@ const BookingForm = () => {
 
   return (
     <div
+      id="book-a-table"
       className={`${styles.bookingFormSection} h-auto lg:h-[788px]  py-[30px] lg:py-[120px]`}
     >
       <div className="w-[330px] lg:w-[1320px] mx-auto relative">
@@ -77,8 +78,8 @@ const BookingForm = () => {
                 type="text"
                 name="name"
                 onChange={handleChange}
-                required
-                placeholder="Your Name*"
+                // required
+                placeholder="Your Name *"
                 className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
               />
 
@@ -126,14 +127,14 @@ const BookingForm = () => {
                 <input
                   type="number"
                   name="people"
-                  value={formData.people}
+                  // value={formData.people}
                   onChange={handleChange}
                   placeholder="Total People*"
                   className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid caret-white-solid outline-none"
                   min="1"
                 />
                 {/* Up and down icons */}
-                <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex flex-col">
+                {/* <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex flex-col">
                   <button
                     type="button"
                     onClick={() => handleChange(1)}
@@ -148,7 +149,7 @@ const BookingForm = () => {
                   >
                     ▼
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
 

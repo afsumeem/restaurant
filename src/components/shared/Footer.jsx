@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <div className={`${styles.footerSection} `}>
       <div
-        className={`${styles.footerSection2} w-full h-auto lg:h-[719px] px-[30px] lg:px-[300px] py-[30px] lg:py-[120px]`}
+        className={`${styles.footerSection2} w-full h-auto lg:h-[719px]  py-[30px] lg:py-[120px]`}
       >
-        <div className="mx-auto">
+        <div className="w-[330px] lg:w-[1320px] mx-auto">
           {/* section title */}
           <h3 className="text-[40px] lg:text-[62px] text-white-solid leading-[48px] lg:leading-[62px]  font-medium uppercase text-center mb-12">
             We ready to have you the best dining experiences
@@ -160,7 +160,7 @@ const Footer = () => {
 
               {/* footer text */}
               <p className="text-center text-white-solid mt-4 lg:mt-[25px] text-base lg:text-[21px] tracking-wider font-lighter lg:font-light leading-[18px] :leading-6">
-                © 2023 Niomax All Rights Reserved{" "}
+                © 2023 All Rights Reserved{" "}
               </p>
             </div>
           </div>
