@@ -10,7 +10,9 @@ const Home = () => {
       <HeroSection />
       <About />
       <PopularFoods />
+
       <BookingForm />
+
       <Testimonial />
     </div>
   );

@@ -9,18 +9,18 @@
   },
   {
     "id": 2,
-    "name": "Khalid Al Dawsry",
-    "address": "Jeddah, Saudi",
-    "image": "https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246754/restaurant/user1_arxszm.png",
-    "comment": "You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
-    "videoId": "4kYC5V2tbCE"
+    "name": "Jane Smith",
+    "address": "New York, USA",
+    "image": "https://res.cloudinary.com/dghf2lzu3/image/upload/v1731277341/restaurant/user-avatar-reloaded_iw89zt.png",
+    "comment": "The food was amazing! I had the Lamb Kabsa, and it was flavorful and tender. Highly recommended! The food was amazing! I had the Lamb Kabsa, and it was flavorful and tender. Highly recommended!",
+    "videoId": "kZCBZAL0RJE"
   },
   {
     "id": 3,
-    "name": "Khalid Al Dawsry",
-    "address": "Jeddah, Saudi",
-    "image": "https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246754/restaurant/user1_arxszm.png",
-    "comment": "You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
-    "videoId": "4kYC5V2tbCE"
+    "name": "Ahmed Al Faisal",
+    "address": "Dubai, UAE",
+    "image": "https://res.cloudinary.com/dghf2lzu3/image/upload/v1731277638/restaurant/user_1_kh8cog.png",
+    "comment": "I absolutely loved the Mandi rice. It was so aromatic, and the chicken was perfectly grilled. I’ll be coming back for more.I absolutely loved the Mandi rice. It was so aromatic, and the chicken was perfectly grilled.",
+    "videoId": "3PAgUqEz6OE"
   }
 ]
