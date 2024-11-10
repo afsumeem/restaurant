@@ -1,4 +1,3 @@
-import aboutImage from "../../assets/about.png";
 import { useState } from "react";
 import phoneImg from "../../assets/call.svg";
 import deliveryImg from "../../assets/delivery.svg";
@@ -7,7 +6,6 @@ import pickupImg from "../../assets/pickup.svg";
 import aboutEllipse from "../../assets/aboutEllipse.svg";
 import aboutEllipse2 from "../../assets/aboutEllipse2.svg";
 import aboutEllipse3 from "../../assets/aboutEllipse3.svg";
-import sectionBG from "../../assets/section-bg.png";
 
 //
 
@@ -18,7 +16,7 @@ const About = () => {
       {/* section-bg */}
       <div className="absolute -right-[180px] bottom-20   hidden lg:block">
         <img
-          src={sectionBG}
+          src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731248634/restaurant/rsz_section-bg_yp23c5.png"
           alt="section-bg"
           className="h-[255px] -rotate-[24deg] "
           style={{
@@ -33,8 +31,8 @@ const About = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[78px] mb-[50px] lg:mb-[120px]">
           <div className="relative">
             <img
-              src={aboutImage}
-              alt=""
+              src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246751/restaurant/about_opijdn.png"
+              alt="about-image"
               className="w-[330px] h-[246px] md:w-full lg:w-[617px] lg:h-[460px]"
             />
             <div className="absolute top-[30px] left-6 bg-white-solid rounded-[20px] w-[128px] h-[73px] lg:w-[241px] lg:h-[136px] flex justify-between items-center gap-[5px] lg:gap-3 p-[11px] lg:p-[22px]">

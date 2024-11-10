@@ -51,7 +51,7 @@ const BookingForm = () => {
 
   return (
     <div
-      className={`${styles.popularFoodSection} h-auto lg:h-[788px]  py-[30px] lg:py-[120px]`}
+      className={`${styles.bookingFormSection} h-auto lg:h-[788px]  py-[30px] lg:py-[120px]`}
     >
       <div className="w-[330px] lg:w-[1320px] mx-auto relative">
         {/* section title */}

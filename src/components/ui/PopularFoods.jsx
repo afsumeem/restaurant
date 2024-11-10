@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { Navigation } from "swiper/modules";
 import SliderNavigation from "./SliderNavigation";
-import sectionBG from "../../assets/section-bg.png";
 
 //
 
@@ -29,7 +28,7 @@ const PopularFoods = () => {
       {/* section-bg */}
       <div className="absolute -left-[190px] bottom-20 hidden lg:block">
         <img
-          src={sectionBG}
+          src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731248634/restaurant/rsz_section-bg_yp23c5.png"
           alt="section-bg"
           className="h-[255px] -rotate-[72deg]"
           style={{

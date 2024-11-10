@@ -1,5 +1,4 @@
 import styles from "../../styles/HeroSection.module.css";
-import heroImage from "/src/assets/banner-image.png";
 import star from "/src/assets/star.svg";
 import offer from "/src/assets/offer.svg";
 
@@ -38,7 +37,7 @@ const HeroSection = () => {
               className="absolute -top-4 right-0  lg:-top-8 lg:-right-6 h-[45px] w-[45px] z-[1]"
             />
             <img
-              src={heroImage}
+              src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246754/restaurant/banner-image_dbavkd.png"
               alt="hero-image "
               className="rotate-360 w-full max-h-[310px]	lg:max-w-[700px] lg:max-h-[649px] z-[2]"
             />

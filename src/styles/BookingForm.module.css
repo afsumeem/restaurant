@@ -1,5 +1,5 @@
-.popularFoodSection {
-  background: url(../assets/formBanner.jpeg);
+.bookingFormSection {
+  background: url("https://res.cloudinary.com/dghf2lzu3/image/upload/v1731248149/restaurant/formbanner_qtgrgx.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

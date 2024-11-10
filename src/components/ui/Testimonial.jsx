@@ -6,8 +6,6 @@ import { Navigation } from "swiper/modules";
 import SliderNavigation from "./SliderNavigation";
 import { useEffect, useState } from "react";
 import testimonialVector from "../../assets/testimonial-vector.svg";
-import sectionBG from "../../assets/sectionbg-2.png";
-import sectionBG3 from "../../assets/sectionbg3.png";
 
 const Testimonial = () => {
   const [reviews, setReviews] = useState([]);
@@ -27,7 +25,7 @@ const Testimonial = () => {
 
       <div className="absolute -left-[130px] top-40 hidden lg:block">
         <img
-          src={sectionBG}
+          src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246753/restaurant/sectionbg-2_yj9j5p.png"
           alt="section-bg"
           className="h-[255px] -rotate-[87deg]"
           style={{
@@ -40,7 +38,7 @@ const Testimonial = () => {
 
       <div className="absolute  bottom-44 -right-44  hidden lg:block">
         <img
-          src={sectionBG3}
+          src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246755/restaurant/sectionbg3_gmqe2f.png"
           alt="section-bg"
           className="w-[566px] h-[303px] rotate-[34.7deg]"
           style={{

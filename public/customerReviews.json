@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Khalid Al Dawsry",
     "address": "Jeddah, Saudi",
-    "image": "/src/assets/user1.png",
+    "image": "https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246754/restaurant/user1_arxszm.png",
     "comment": "You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
     "videoId": "4kYC5V2tbCE"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Khalid Al Dawsry",
     "address": "Jeddah, Saudi",
-    "image": "/src/assets/user1.png",
+    "image": "https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246754/restaurant/user1_arxszm.png",
     "comment": "You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
     "videoId": "4kYC5V2tbCE"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Khalid Al Dawsry",
     "address": "Jeddah, Saudi",
-    "image": "/src/assets/user1.png",
+    "image": "https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246754/restaurant/user1_arxszm.png",
     "comment": "You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
     "videoId": "4kYC5V2tbCE"
   }
