@@ -26,7 +26,7 @@ const Header = () => {
         scrolled ? styles.navbarBG : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1320px] mx-auto px-[30px] lg:px-0">
+      <div className="max-w-[1320px] mx-auto px-7 lg:px-0">
         <div className="flex basis-1/5 items-center justify-between h-[80px]  w-full">
           {/* logo */}
 

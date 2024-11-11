@@ -11,10 +11,11 @@ import aboutEllipse3 from "../../assets/aboutEllipse3.svg";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
+
   return (
-    <div className="w-full h-auto lg:h-[864px]  py-[30px] lg:py-[120px] relative overflow-hidden">
+    <div className="w-full h-auto lg:h-[864px] py-[30px] lg:py-[120px] relative overflow-hidden">
       {/* section-bg */}
-      <div className="absolute -right-[180px] bottom-20   hidden lg:block">
+      <div className="absolute -right-[180px] bottom-28   hidden lg:block">
         <img
           src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731248634/restaurant/rsz_section-bg_yp23c5.png"
           alt="section-bg"
@@ -25,15 +26,15 @@ const About = () => {
         />
       </div>
 
-      <div className="w-[330px] lg:w-[1320px] mx-auto">
+      <div className="w-full lg:w-[90%] xl:w-[1320px] mx-auto px-7 lg:px-0">
         {/* tab */}
 
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[78px] mb-[50px] lg:mb-[120px]">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[50] xl:gap-[78px] mb-[50px] lg:mb-[120px]">
           <div className="relative">
             <img
               src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246751/restaurant/about_opijdn.png"
               alt="about-image"
-              className="w-[330px] h-[246px] md:w-full lg:min-w-[617px] lg:h-[460px]"
+              className="w-full lg:w-[517px] xl:w-[610px] h-[246px] sm:h-[350px] md:h-[520px] lg:h-[460px]"
             />
             <div className="absolute top-[30px] left-6 bg-white-solid rounded-[20px] w-[128px] h-[73px] lg:w-[241px] lg:h-[136px] flex justify-between items-center gap-[5px] lg:gap-3 p-[11px] lg:p-[22px]">
               <div className="ml-[22px]">
@@ -66,7 +67,7 @@ const About = () => {
 
           <div className=" mt-8">
             {/* Tab Buttons */}
-            <div className="flex justify-start space-x-6 mb-6 border-b border-orange-tab">
+            <div className="flex justify-start space-x-3 sm:space-x-4 md:space-x-6 mb-6 border-b border-orange-tab">
               {/* about btn */}
 
               <button
@@ -112,7 +113,7 @@ const About = () => {
                   <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
                     Exceptional culinary experience and delicious food
                   </h3>
-                  <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
+                  <p className="text-dark-charcoal font-normal text-base w-full lg:w-[559px] leading-[26px] mt-6 mb-8">
                     Our restaurant brings the essence of fine dining and a cozy
                     atmosphere, where culinary art meets exceptional service.
                     Each dish is crafted with locally-sourced ingredients and
@@ -136,7 +137,7 @@ const About = () => {
                   <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
                     Our Culinary Journey
                   </h3>
-                  <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
+                  <p className="text-dark-charcoal font-normal text-base w-full lg:w-[559px] leading-[26px] mt-6 mb-8">
                     Experience the artistry and passion of our chefs, bringing
                     flavors from around the world to your plate. Each dish is
                     crafted with precision and care, providing a memorable
@@ -163,7 +164,7 @@ const About = () => {
                   <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
                     Get in Touch with Us
                   </h3>
-                  <p className="text-dark-charcoal font-normal text-base w-[330px] lg:w-[559px] leading-[26px] mt-6 mb-8">
+                  <p className="text-dark-charcoal font-normal text-base w-full lg:w-[559px] leading-[26px] mt-6 mb-8">
                     We’d love to hear from you! Whether you have questions about
                     our menu, reservations, or special events, our team is here
                     to help. Reach out to us and we’ll be in touch shortly. We’d
@@ -188,7 +189,7 @@ const About = () => {
 
         {/*  */}
 
-        <div className="flex flex-col lg:flex-row justify-between gap-8">
+        <div className="flex flex-wrap justify-between gap-8">
           {/*  1*/}
           <div className="flex gap-x-4 items-center ">
             <div className="w-[70px] h-[70px] rounded-full shadow-custom-light flex items-center justify-center lg:h-[90px] lg:w-[90px] ">

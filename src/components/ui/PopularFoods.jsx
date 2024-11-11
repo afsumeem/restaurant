@@ -23,7 +23,7 @@ const PopularFoods = () => {
   //
   return (
     <div
-      className={`${styles.popularFoodSection} h-auto lg:h-[710px]  py-[30px] lg:py-[120px] relative overflow-hidden`}
+      className={`${styles.popularFoodSection} h-full lg:h-[710px] py-[30px] lg:py-[120px] relative overflow-hidden`}
     >
       {/* section-bg */}
       <div className="absolute -left-[190px] bottom-20 hidden lg:block">
@@ -38,7 +38,7 @@ const PopularFoods = () => {
       </div>
 
       {/*  */}
-      <div className="w-[330px] lg:w-[1320px] mx-auto relative">
+      <div className="w-full max-w-full lg:w-[90%] xl:w-[1320px] mx-auto px-7 lg:px-0 relative">
         {/* section title */}
 
         <div className="flex items-center justify-between mb-[30px] lg:mb-[60px]">
@@ -51,10 +51,13 @@ const PopularFoods = () => {
               POPULAR FOOD ITEMS
             </h3>
           </div>
+
+          {/* slider navigation */}
           <div className="hidden lg:block">
             <SliderNavigation swiper={swiperInstance} />
           </div>
         </div>
+
         {/*  popular food carousel*/}
 
         <Swiper
@@ -74,7 +77,7 @@ const PopularFoods = () => {
             },
             768: {
               slidesPerView: 2,
-              spaceBetween: 30,
+              spaceBetween: 20,
             },
             1024: {
               slidesPerView: 3,
@@ -97,7 +100,7 @@ const PopularFoods = () => {
                   className="mx-auto w-[186px] h-[124px]"
                 />
                 <div className=" w-[57px] mx-auto h-1 my-6 bg-border-focus"></div>
-                <h4 className="text-secondary-color text-2xl ] leading-9 text-center">
+                <h4 className="text-secondary-color text-2xl leading-9 text-center">
                   {food.title}
                 </h4>
                 <h5 className="text-center text-secondary-color text-base  leading-8 tracking-tighter">

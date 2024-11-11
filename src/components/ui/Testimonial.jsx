@@ -20,7 +20,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div className="h-auto lg:h-[965px] py-[30px] lg:py-[120px] relative overflow-hidden">
+    <div className="h-full lg:h-[965px] py-[30px] lg:py-[120px] relative overflow-hidden">
       {/* section-bg */}
 
       <div className="absolute -left-[130px] top-40 hidden lg:block">
@@ -48,7 +48,8 @@ const Testimonial = () => {
       </div>
 
       {/*  */}
-      <div className="w-[330px] lg:w-[1320px] mx-auto relative">
+
+      <div className="max-w-full w-full lg:w-[90%] xl:w-[1320px] mx-auto relative px-7 lg:px-0">
         {/* section title */}
         <div className="flex items-center justify-between mb-[30px] lg:mb-[60px]">
           <div>
@@ -74,9 +75,10 @@ const Testimonial = () => {
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index} className="">
-              <div className="w-[1320px] h-[555px] flex flex-col lg:flex-row-reverse bg-white-solid p-0  my-0 lg:my-8 mx-auto">
+              <div className="max-w-full w-full  xl:w-[1320px] h-full lg:h-[555px] flex flex-col lg:flex-row-reverse bg-white-solid p-0 my-0 mx-auto">
                 {/* video  */}
-                <div className="w-[330px] h-[240px] lg:w-[763px] lg:h-[555px]">
+
+                <div className="w-full h-[240px] lg:w-[763px] md:h-[300px] lg:h-[555px]">
                   <iframe
                     width="100%"
                     height="100%"
@@ -88,20 +90,21 @@ const Testimonial = () => {
 
                 {/* content */}
                 <div
-                  className={`w-[330px] lg:w-[556px] relative h-[335px] lg:h-[555px] p-[25px] lg:py-[71px] lg:px-[85px] ${styles.testimonialContentBg}`}
+                  className={`w-full lg:w-[556px] h-full md:h-[280px] lg:h-[555px] p-6 lg:p-[50px] xl:py-[71px] xl:px-[85px]  ${styles.testimonialContentBg} relative`}
                 >
                   <div className="relative h-full">
                     <p className="review-quote text-[59.93px] mb-0 pb-0 absolute -top-3 lg:top-0 left-0">
                       “
                     </p>
-                    <div className="ml-[19px] lg:ml-[26.26px] pt-5 lg:pt-10">
-                      {/* customer comment */}
+                    <div className="flex flex-col gap-10 justify-between h-full ml-[19px] lg:ml-[26.26px]">
+                      <div className=" pt-5 lg:pt-10">
+                        {/* customer comment */}
 
-                      <p className="flex items-start text-lg lg:text-xl leading-7 lg:leading-[34px] text-secondary-color">
-                        {review.comment}
-                      </p>
-
-                      <div className="absolute bottom-0 w-full -ml-[20px] lg:ml-0">
+                        <p className="flex items-start text-lg lg:text-xl leading-7 lg:leading-[34px] text-secondary-color">
+                          {review.comment}
+                        </p>
+                      </div>
+                      <div className=" w-full -ml-[19px] lg:ml-0">
                         {/* customer info */}
                         <div className="flex justify-between relative  border-b border-secondary-color pb-[18px]">
                           <div>
@@ -118,6 +121,7 @@ const Testimonial = () => {
                       </div>
                     </div>
                   </div>
+                  {/*  */}
                   <img
                     src={testimonialVector}
                     alt=""
@@ -129,7 +133,7 @@ const Testimonial = () => {
           ))}
         </Swiper>
         {/*  navigation on small screens */}
-        <div className="block lg:hidden mt-4">
+        <div className="block lg:hidden ">
           <SliderNavigation swiper={swiperInstance} />
         </div>
       </div>

@@ -117,3 +117,11 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/*  */
+input[type="date"] {
+  appearance: none !important; /* Hide the default date picker icon */
+  -webkit-appearance: none; /* For Safari */
+}
+
+/*  */

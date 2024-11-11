@@ -7,33 +7,34 @@ import facebook from "../../assets/facebook.svg";
 import x from "../../assets/x.svg";
 import instagram from "../../assets/instagram.svg";
 import linkedIn from "../../assets/linkedIn.svg";
-// w-[330px] lg:w-[1320px]
+
 const Footer = () => {
   return (
     <div className={`${styles.footerSection} `}>
       <div
         className={`${styles.footerSection2} w-full h-auto lg:h-[719px]  py-[30px] lg:py-[120px]`}
       >
-        <div className="w-[330px] lg:w-[1320px] mx-auto">
+        <div className="max-w-full w-[330px] lg:w-[90%] xl:w-[1320px] mx-auto px-7 lg:px-0">
           {/* section title */}
-          <h3 className="text-[40px] lg:text-[62px] text-white-solid leading-[48px] lg:leading-[62px]  font-medium uppercase text-center mb-12">
+
+          <h3 className="text-2xl lg:text-[40px] xl:text-[62px] text-white-solid leading-[1.2] font-medium uppercase text-center mb-8 lg:mb-12">
             We ready to have you the best dining experiences
           </h3>
 
-          {/*  */}
+          {/* section content */}
           <div>
             <div className="flex flex-col lg:flex-row justify-between gap-6">
               {/*  opening hours*/}
-              <div className="">
+              <div className="text-center ">
                 <img
                   src={clock}
                   alt="clock-icon"
                   className="mx-auto h-[22.5px] w-[22.5px]"
                 />
-                <h4 className="text-center text-2xl leading-9 text-white-solid tracking-wider mt-4 lg:mt-6 mb-3">
+                <h4 className="text-2xl leading-9 text-white-solid tracking-wider mt-4 lg:mt-6 mb-3">
                   Opening hours
                 </h4>
-                <p className="text-center text-base text-footer-text tracking-wider font-light leading-[25px] ">
+                <p className="text-base text-footer-text tracking-wider font-light leading-[25px] ">
                   Monday - Sunday
                   <br />
                   9:00 AM to 11:30 PM
@@ -41,48 +42,48 @@ const Footer = () => {
               </div>
 
               {/* lets talk */}
-              <div>
+              <div className="text-center">
                 <img
                   src={call2}
                   alt=""
                   className="mx-auto h-[22.5px] w-[22.5px]"
                 />
-                <h4 className="text-center text-2xl leading-9 text-white-solid tracking-wider mt-4 lg:mt-6 mb-3">
+                <h4 className=" text-2xl leading-9 text-white-solid tracking-wider mt-4 lg:mt-6 mb-3">
                   LET&apos;S TALK
                 </h4>
-                <p className="text-center text-base text-footer-text tracking-wider font-light leading-[25px] ">
+                <p className=" text-base text-footer-text tracking-wider font-light leading-[25px] ">
                   Phone: 1-800-222-4545 <br />
                   Fax: 1-800-222-4545
                 </p>
               </div>
 
               {/* book a table */}
-              <div>
+              <div className="text-center">
                 <img
                   src={mail}
                   alt=""
                   className="mx-auto h-[22.5px] w-[22.5px]"
                 />
-                <h4 className="text-center text-2xl leading-9 text-white-solid tracking-wider mt-4 lg:mt-6 mb-3">
+                <h4 className=" text-2xl leading-9 text-white-solid tracking-wider mt-4 lg:mt-6 mb-3">
                   BOOK A TABLE
                 </h4>
-                <p className="text-center text-base text-footer-text tracking-wider font-light leading-[25px] ">
+                <p className=" text-base text-footer-text tracking-wider font-light leading-[25px] ">
                   Email: demo@website.com <br />
                   Support: support@website.com
                 </p>
               </div>
 
               {/* our address */}
-              <div>
+              <div className="text-center">
                 <img
                   src={map}
                   alt=""
                   className="mx-auto h-[22.5px] w-[22.5px]"
                 />
-                <h4 className="text-center text-2xl leading-9 text-white-solid tracking-wider mt-4 lg:mt-6 mb-3">
+                <h4 className=" text-2xl leading-9 text-white-solid tracking-wider mt-4 lg:mt-6 mb-3">
                   Our Address
                 </h4>
-                <p className="text-center text-base text-footer-text tracking-wider font-light leading-[25px] ">
+                <p className="text-base text-footer-text tracking-wider font-light leading-[25px] ">
                   123 Stree New York City , United <br /> States Of America.
                 </p>
               </div>
@@ -100,7 +101,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className=""
                 >
-                  <div className="border-[.83px] lg:border-[1.23px] border-white-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
+                  <div className="border-[.83px] lg:border-[1.23px] border-white-border hover:border-[#febf00] duration-200 p-[9.92px] lg:p-[14px] w-fit rounded-full">
                     <img
                       src={facebook}
                       alt=""
@@ -116,7 +117,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className=""
                 >
-                  <div className="border-[.83px] lg:border-[1.23px] border-white-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
+                  <div className="border-[.83px] lg:border-[1.23px] border-white-border hover:border-[#febf00] duration-200 p-[9.92px] lg:p-[14px] w-fit rounded-full">
                     <img
                       src={x}
                       alt=""
@@ -132,7 +133,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className=""
                 >
-                  <div className="border-[.83px] lg:border-[1.23px] border-white-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
+                  <div className="border-[.83px] lg:border-[1.23px] border-white-border hover:border-[#febf00] duration-200 p-[9.92px] lg:p-[14px] w-fit rounded-full">
                     <img
                       src={instagram}
                       alt=""
@@ -148,7 +149,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className=""
                 >
-                  <div className="border-[.83px] lg:border-[1.23px] border-white-border p-[9.92px] lg:p-[14px] w-fit rounded-full">
+                  <div className="border-[.83px] lg:border-[1.23px] border-white-border hover:border-[#febf00] duration-200 p-[9.92px] lg:p-[14px] w-fit rounded-full">
                     <img
                       src={linkedIn}
                       alt=""

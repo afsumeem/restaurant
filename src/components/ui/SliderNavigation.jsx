@@ -17,7 +17,7 @@ const SliderNavigation = ({ swiper }) => {
   };
 
   return (
-    <div className="navigationContainer flex gap-8 my-6 justify-center mx-auto mt-4 ">
+    <div className="navigationContainer flex gap-8  justify-center mx-auto  ">
       {/* prev arrow */}
 
       <button
