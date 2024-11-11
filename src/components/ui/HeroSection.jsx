@@ -26,7 +26,9 @@ const HeroSection = () => {
               Among the best Saudi chefs in the world, serving you something
               beyond flavor.
             </p>
-            <button className="mt-4 lg:mt-10 ">Explore Menu</button>
+            <button className="mt-4 lg:mt-10 transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg">
+              Explore Menu
+            </button>
           </div>
 
           {/* hero-section image */}

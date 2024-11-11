@@ -40,16 +40,33 @@ const Header = () => {
           {/* nav items */}
           <div className="hidden basis-4/5  lg:flex justify-between space-x-8 items-center  ">
             <div className="flex space-x-8">
-              <a href="/">Home</a>
-              <a href="#about">About</a>
-              <a href="#portfolio">Portfolio</a>
-              <a href="#clients">Clients</a>
-              <a href="#blog">Blog</a>
-              <a href="#contact">Contact</a>
+              <a href="/" className={styles.navigationLink}>
+                Home
+              </a>
+              <a href="#about" className={styles.navigationLink}>
+                About
+              </a>
+              <a href="#portfolio" className={styles.navigationLink}>
+                Portfolio
+              </a>
+              <a href="#clients" className={styles.navigationLink}>
+                Clients
+              </a>
+              <a href="#blog" className={styles.navigationLink}>
+                Blog
+              </a>
+              <a href="#contact" className={styles.navigationLink}>
+                Contact
+              </a>
             </div>
 
             <a href="#book-a-table">
-              <button onClick={() => setIsOpen(false)}>Book a Table</button>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg"
+              >
+                Book a Table
+              </button>
             </a>
           </div>
 
@@ -65,64 +82,66 @@ const Header = () => {
         </div>
       </div>
 
-      {/*  */}
-      {/* {isOpen && (
-        <div className={`lg:hidden  w-full ${styles.navbarBG}`}>
-          <div className="px-4 pt-2 pb-3 space-y-1">
-            <a href="/" className="block ">
-              Home
-            </a>
-            <a href="#about" className="block ">
-              About
-            </a>
-            <a href="#portfolio" className="block ">
-              Portfolio
-            </a>
-            <a href="#clients" className="block ">
-              Clients
-            </a>
-            <a href="#blog" className="block  ">
-              Blog
-            </a>
-            <a href="#contact" className="block">
-              Contact
-            </a>
-            <button>Book a Table</button>
-          </div>
-        </div>
-      )} */}
-
-      {/* Dropdown menu overlay */}
+      {/* dropdown menu  */}
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-70 z-30 flex justify-end">
           <div className={` w-full p-4 h-fit relative ${styles.navbarBG}`}>
-            {/* Close button */}
+            {/* close button */}
             <IoMdClose
               onClick={() => setIsOpen(false)}
               className="absolute top-4 right-4 text-white text-2xl font-bold"
             />
 
             <div className="flex flex-col space-y-4 mt-4">
-              <a href="/" onClick={() => setIsOpen(false)}>
+              <a
+                href="/"
+                onClick={() => setIsOpen(false)}
+                className="border-b border-[#c22a22] pb-1"
+              >
                 Home
               </a>
-              <a href="#about" onClick={() => setIsOpen(false)}>
+              <a
+                href="#about"
+                onClick={() => setIsOpen(false)}
+                className="border-b border-[#c22a22] pb-1"
+              >
                 About
               </a>
-              <a href="#portfolio" onClick={() => setIsOpen(false)}>
+              <a
+                href="#portfolio"
+                onClick={() => setIsOpen(false)}
+                className="border-b border-[#c22a22] pb-1"
+              >
                 Portfolio
               </a>
-              <a href="#clients" onClick={() => setIsOpen(false)}>
+              <a
+                href="#clients"
+                onClick={() => setIsOpen(false)}
+                className="border-b border-[#c22a22] pb-1"
+              >
                 Clients
               </a>
-              <a href="#blog" onClick={() => setIsOpen(false)}>
+              <a
+                href="#blog"
+                onClick={() => setIsOpen(false)}
+                className="border-b border-[#c22a22] pb-1"
+              >
                 Blog
               </a>
-              <a href="#contact" onClick={() => setIsOpen(false)}>
+              <a
+                href="#contact"
+                onClick={() => setIsOpen(false)}
+                className="border-b border-[#c22a22] pb-1"
+              >
                 Contact
               </a>
               <a href="#book-a-table">
-                <button onClick={() => setIsOpen(false)}>Book a Table</button>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg"
+                >
+                  Book a Table
+                </button>
               </a>
             </div>
           </div>

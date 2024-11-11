@@ -3,3 +3,22 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(20px);
 }
+
+.navigationLink {
+  position: relative;
+}
+
+.navigationLink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 1);
+  transition: width 0.3s ease;
+}
+
+.navigationLink:hover::after {
+  width: 100%;
+}

@@ -34,7 +34,7 @@ const About = () => {
             <img
               src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246751/restaurant/about_opijdn.png"
               alt="about-image"
-              className="w-full lg:w-[517px] xl:w-[610px] h-[246px] sm:h-[350px] md:h-[520px] lg:h-[460px]"
+              className="w-full lg:w-[800px] xl:max-w-[700px] h-[246px] sm:h-[350px] md:h-[520px] lg:h-[400px] xl:h-[500px] "
             />
             <div className="absolute top-[30px] left-6 bg-white-solid rounded-[20px] w-[128px] h-[73px] lg:w-[241px] lg:h-[136px] flex justify-between items-center gap-[5px] lg:gap-3 p-[11px] lg:p-[22px]">
               <div className="ml-[22px]">
@@ -120,7 +120,9 @@ const About = () => {
                     inspired by both traditional and contemporary recipes.
                   </p>
                   <div className="flex items-center space-x-8">
-                    <button>About More</button>
+                    <button className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg">
+                      About More
+                    </button>
                     <div className="flex items-center space-x-2">
                       <img src={phoneImg} alt="PhoneIcon" className="h-6 w-6" />
                       <p className="text-secondary-color text-[14px] lg:text-[18px] font-semibold">
@@ -147,7 +149,9 @@ const About = () => {
                     providing a memorable dining experience.
                   </p>
                   <div className="flex items-center space-x-8">
-                    <button>Learn More</button>
+                    <button className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg">
+                      Learn More
+                    </button>
                     <div className="flex items-center space-x-2">
                       <img src={phoneImg} alt="PhoneIcon" className="h-6 w-6" />
                       <p className="text-secondary-color text-[14px] lg:text-[18px] font-semibold">
@@ -173,7 +177,9 @@ const About = () => {
                     help. Reach out to us and we’ll be in touch shortly.
                   </p>
                   <div className="flex items-center space-x-8">
-                    <button>Contact Us</button>
+                    <button className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg">
+                      Contact Us
+                    </button>
                     <div className="flex items-center space-x-2">
                       <img src={phoneImg} alt="PhoneIcon" className="h-6 w-6" />
                       <p className="text-secondary-color text-[14px] lg:text-[18px] font-semibold">

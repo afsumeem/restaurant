@@ -109,7 +109,7 @@ const BookingForm = () => {
         cancelButtonText: "Cancel",
       });
 
-      // if user cancel return without submitting
+      // if user cancel -return without submitting
       if (!result.isConfirmed) return;
     }
 
@@ -277,7 +277,10 @@ const BookingForm = () => {
             </div>
 
             {/* book now btn */}
-            <button type="submit" className=" mt-6 lg:mt-8">
+            <button
+              type="submit"
+              className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg mt-6 lg:mt-8"
+            >
               Book Now
             </button>
           </form>

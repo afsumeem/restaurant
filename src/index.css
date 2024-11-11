@@ -89,8 +89,6 @@ a {
   z-index: 999;
 }
 
-/* Hide default calendar icon */
-
 /* animated css */
 
 @keyframes fadeIn {
@@ -120,8 +118,8 @@ input[type="number"] {
 
 /*  */
 input[type="date"] {
-  appearance: none !important; /* Hide the default date picker icon */
-  -webkit-appearance: none; /* For Safari */
+  appearance: none !important;
+  -webkit-appearance: none;
 }
 
 /*  */
