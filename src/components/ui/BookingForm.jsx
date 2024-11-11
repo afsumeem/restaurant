@@ -13,6 +13,40 @@ const BookingForm = () => {
     people: "",
     message: "",
   });
+  const [errors, setErrors] = useState({});
+
+  // validation booking form
+  const validate = () => {
+    const newErrors = {};
+    const today = new Date().toISOString().split("T")[0];
+
+    //name
+    if (!formData.name) newErrors.name = "Name is required";
+
+    // email
+    // if (!formData.email) newErrors.email = "Email is required";
+    if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Email is invalid. Example: example@gmail.com";
+
+    // date
+    if (!formData.date) newErrors.date = "Date is required";
+    else if (formData.date < today) {
+      newErrors.date = "Cannot reserve a past date";
+      Swal.fire(
+        "Invalid Date",
+        "You cannot select a past date for reservation.",
+        "error"
+      );
+    }
+
+    // total people
+    if (!formData.people || formData.people <= 0)
+      newErrors.people =
+        "Number of people is required and must be greater than 0";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -20,7 +54,8 @@ const BookingForm = () => {
       [e.target.name]: e.target.value,
     });
   };
-  //
+
+  //increment people
   const incrementPeople = () => {
     setFormData((prevData) => ({
       ...prevData,
@@ -28,6 +63,7 @@ const BookingForm = () => {
     }));
   };
 
+  // decrement ppl
   const decrementPeople = () => {
     setFormData((prevData) => ({
       ...prevData,
@@ -35,8 +71,25 @@ const BookingForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  // handle submit
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validate()) return;
+
+    //  check if the message box is empty
+    if (!formData.message) {
+      const result = await Swal.fire({
+        title: "No message provided",
+        text: "Are you sure you want to submit the form without a message?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, submit it",
+        cancelButtonText: "Cancel",
+      });
+
+      // if  user cancel return without submitting
+      if (!result.isConfirmed) return;
+    }
 
     // Show alert
     Swal.fire({
@@ -44,12 +97,12 @@ const BookingForm = () => {
       icon: "success",
       title: "Booking information ready to be saved!",
       showConfirmButton: true,
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Save data to local storage after user clicks "OK"
+    }).then((res) => {
+      if (res.isConfirmed) {
+        // save data to local storage
         localStorage.setItem("bookingData", JSON.stringify(formData));
 
-        // Clear the form after saving the data
+        // reset the form after submit the form
         setFormData({
           name: "",
           email: "",
@@ -93,80 +146,100 @@ const BookingForm = () => {
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-[30px] mb-4 lg:mb-6 ">
               {/* name input */}
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                // required
-                placeholder="Your Name *"
-                className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
-              />
+              <div className="w-full">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  // required
+                  placeholder="Your Name *"
+                  className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
+                />{" "}
+                {errors.name && (
+                  <p className="text-red-500 text-sm">{errors.name}</p>
+                )}
+              </div>
 
               {/* email input */}
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Your Email"
-                className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
-              />
+              <div className="w-full">
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
+                />{" "}
+                {errors.email && (
+                  <p className="text-red-500 text-sm">{errors.email}</p>
+                )}
+              </div>
             </div>
 
             {/*  date and people*/}
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-[30px] mb-4 lg:mb-6 ">
-              <div className="relative w-full">
-                {/* date */}
-                <input
-                  type="date"
-                  name="date"
-                  value={formData.date}
-                  onChange={handleChange}
-                  placeholder="Reservation Date"
-                  className="border border-white-border w-full bg-inherit py-3 px-4 caret-white-solid outline-none text-white-solid appearance-none"
-                />
-                <span className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                  <img
-                    src={calender}
-                    alt="Calendar Icon"
-                    className="w-5 h-5 "
+              <div className="w-full">
+                <div className="relative w-full">
+                  {/* date */}
+                  <input
+                    type="date"
+                    name="date"
+                    value={formData.date}
+                    onChange={handleChange}
+                    placeholder="Reservation Date"
+                    className="border border-white-border w-full bg-inherit py-3 px-4 caret-white-solid outline-none text-white-solid appearance-none"
                   />
-                </span>
+
+                  <span className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                    <img
+                      src={calender}
+                      alt="Calendar Icon"
+                      className="w-5 h-5 "
+                    />
+                  </span>
+                </div>
+
+                {errors.date && (
+                  <p className="text-red-500 text-sm">{errors.date}</p>
+                )}
               </div>
 
               {/* people */}
-
-              <div className="relative w-full">
-                <input
-                  type="number"
-                  name="people"
-                  value={formData.people}
-                  onChange={handleChange}
-                  placeholder="Total People"
-                  className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid caret-white-solid outline-none"
-                  min="1"
-                />
-                {/* Up and down icons */}
-                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col">
-                  <button
-                    type="button"
-                    onClick={incrementPeople}
-                    className="bg-inherit text-white-solid hover:text-gray-400 p-0"
-                  >
-                    <TbCaretUp className="text-xl mt-1" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={decrementPeople}
-                    className="bg-inherit text-white-solid hover:text-gray-400 p-0"
-                  >
-                    <TbCaretDown className="text-xl -mt-3" />
-                  </button>
+              <div className="w-full">
+                <div className="relative w-full">
+                  <input
+                    type="number"
+                    name="people"
+                    value={formData.people}
+                    onChange={handleChange}
+                    placeholder="Total People"
+                    className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid caret-white-solid outline-none"
+                    min="1"
+                  />
+                  {/* Up and down icons */}
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex flex-col">
+                    <button
+                      type="button"
+                      onClick={incrementPeople}
+                      className="bg-inherit text-white-solid hover:text-gray-400 p-0"
+                    >
+                      <TbCaretUp className="text-xl mt-1" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={decrementPeople}
+                      className="bg-inherit text-white-solid hover:text-gray-400 p-0"
+                    >
+                      <TbCaretDown className="text-xl -mt-3" />
+                    </button>
+                  </div>
                 </div>
+                {errors.people && (
+                  <p className="text-red-500 text-sm">{errors.people}</p>
+                )}
               </div>
             </div>
-
             {/* message box */}
             <div>
               <textarea
@@ -177,6 +250,9 @@ const BookingForm = () => {
                 placeholder="Message"
                 className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
               ></textarea>
+              {errors.message && (
+                <p className="text-red-500 text-sm">{errors.message}</p>
+              )}
             </div>
 
             {/* book now btn */}
