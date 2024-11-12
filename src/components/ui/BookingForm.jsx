@@ -99,26 +99,27 @@ const BookingForm = () => {
     if (!validate()) return;
 
     //  check if the message box is empty
-    if (!formData.message) {
-      const result = await Swal.fire({
-        title: "No message provided",
-        text: "Are you sure you want to submit the form without a message?",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonText: "Yes, submit it",
-        cancelButtonText: "Cancel",
-      });
+    // if (!formData.message) {
+    //   const result = await Swal.fire({
+    //     title: "No message provided",
+    //     text: "Are you sure you want to submit the form without a message?",
+    //     icon: "warning",
+    //     showCancelButton: true,
+    //     confirmButtonText: "Yes, submit it",
+    //     cancelButtonText: "Cancel",
+    //   });
 
-      // if user cancel -return without submitting
-      if (!result.isConfirmed) return;
-    }
+    //   // if user cancel -return without submitting
+    //   if (!result.isConfirmed) return;
+    // }
 
     // Show alert
     Swal.fire({
       position: "center-center",
       icon: "success",
       title: "Booking information ready to be saved!",
-      showConfirmButton: true,
+      confirmButtonText: "submit it",
+      // showConfirmButton: true,
     }).then((res) => {
       if (res.isConfirmed) {
         // save data to local storage
