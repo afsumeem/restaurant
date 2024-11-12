@@ -26,11 +26,11 @@ const PopularFoods = () => {
       className={`${styles.popularFoodSection} h-full lg:h-[710px] py-[30px] lg:py-[120px] relative overflow-hidden`}
     >
       {/* section-bg */}
-      <div className="absolute -left-[190px] bottom-20 hidden lg:block">
+      <div className="absolute -left-[370px] bottom-8 hidden lg:block">
         <img
           src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731248634/restaurant/rsz_section-bg_yp23c5.png"
           alt="section-bg"
-          className="h-[255px] -rotate-[72deg]"
+          className="h-[490px] -rotate-[72deg]"
           style={{
             clipPath: "polygon(82% 51%, 8% 100%, 100% 100%)",
           }}
@@ -68,6 +68,7 @@ const PopularFoods = () => {
             delay: 500,
             disableOnInteraction: false,
           }}
+          slidesPerView={3}
           speed={1500}
           spaceBetween={30}
           breakpoints={{
@@ -112,7 +113,7 @@ const PopularFoods = () => {
         </Swiper>
 
         {/* navigation on small screens */}
-        <div className="block lg:hidden mt-4">
+        <div className="block lg:hidden mt-4 ">
           <SliderNavigation swiper={swiperInstance} />
         </div>
       </div>

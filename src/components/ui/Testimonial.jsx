@@ -75,7 +75,7 @@ const Testimonial = () => {
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index} className="">
-              <div className="max-w-full w-full  xl:w-[1320px] h-full lg:h-[555px] flex flex-col lg:flex-row-reverse bg-white-solid p-0 my-0 mx-auto">
+              <div className="max-w-full w-full xl:w-[1320px] h-full lg:h-[555px] flex flex-col lg:flex-row-reverse bg-white-solid p-0 my-0 mx-auto">
                 {/* video  */}
 
                 <div className="w-full h-[240px] lg:w-[763px] md:h-[300px] lg:h-[555px]">
@@ -133,7 +133,7 @@ const Testimonial = () => {
           ))}
         </Swiper>
         {/*  navigation on small screens */}
-        <div className="block lg:hidden ">
+        <div className="block lg:hidden mt-4 ">
           <SliderNavigation swiper={swiperInstance} />
         </div>
       </div>

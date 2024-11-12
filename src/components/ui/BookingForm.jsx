@@ -136,8 +136,9 @@ const BookingForm = () => {
         Swal.fire({
           icon: "success",
           title: " saved.",
+          text: "Your booking information has been successfully saved to local storage.",
           showConfirmButton: false,
-          timer: 2000,
+          timer: 4000,
         });
       }
     });
@@ -202,7 +203,7 @@ const BookingForm = () => {
             {/*  date and people*/}
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-[30px] mb-4 lg:mb-6 ">
               <div className=" w-full">
-                <div className="relative w-full date-input-wrapper">
+                <div className="relative w-full">
                   {/* date */}
                   <input
                     type="date"
@@ -210,16 +211,16 @@ const BookingForm = () => {
                     value={formData.date}
                     onChange={handleChange}
                     placeholder="Reservation Date"
-                    className="border border-white-border w-full bg-inherit py-3 px-4 caret-white-solid outline-none text-white-solid appearance-none"
+                    className="border border-white-border w-full bg-inherit py-3 px-4 caret-white-solid outline-none text-white-solid appearance-none custom-date-input"
                   />
 
-                  {/* <span className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <span className="absolute right-5 top-1/2 transform -translate-y-1/2 pointer-events-none">
                     <img
                       src={calender}
                       alt="Calendar Icon"
                       className="w-5 h-5 "
                     />
-                  </span> */}
+                  </span>
                 </div>
 
                 {errors.date && (

@@ -5,7 +5,7 @@ import offer from "/src/assets/offer.svg";
 const HeroSection = () => {
   return (
     <div
-      className={`w-full h-auto lg:h-[1047px] -mt-[77px] lg:-mt-[90px] xl:-mt-[108px]
+      className={`w-full h-auto lg:h-[1047px] -mt-[80px] lg:-mt-[90px] xl:-mt-[108px]
         ${styles.hero} overflow-hidden`}
     >
       <div
@@ -22,7 +22,7 @@ const HeroSection = () => {
               </h1>
             </div>
 
-            <p className="text-white-solid font-extralight text-xl lg:text-2xl w-full lg:w-[500px] xl:w-[559px] mt-4 lg:mt-8 leading-7 lg:leading-8 ">
+            <p className="text-white-solid font-light text-xl lg:text-2xl w-full lg:w-[500px] xl:w-[559px] mt-4 lg:mt-8 leading-7 lg:leading-8 ">
               Among the best Saudi chefs in the world, serving you something
               beyond flavor.
             </p>

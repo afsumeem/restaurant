@@ -10,7 +10,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 40) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -32,7 +32,7 @@ const Header = () => {
 
           <a href="/" className="flex items-center  gap-2 mr-[60px]">
             <img src={logo} alt="" className="h-[37px] w-[37px]" />
-            <p className="text-[28.44px] font-medium text-white-solid siteLogo">
+            <p className="text-[26px] sm:text-[28px] font-medium text-white-solid siteLogo">
               Restau<span className="font-light">rant</span>
             </p>
           </a>
@@ -89,7 +89,7 @@ const Header = () => {
             {/* close button */}
             <IoMdClose
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 text-white text-2xl font-bold"
+              className="absolute top-4 right-4 text-white text-2xl font-bold cursor-pointer"
             />
 
             <div className="flex flex-col space-y-4 mt-4">
