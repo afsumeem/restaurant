@@ -8,7 +8,7 @@ Welcome to the Restaurant Website! This website provides a beautiful, responsive
 
 ## Technologies Used
 
-- **React.js**: Used for building the user interface and creating a responsive, dynamic experience.
+- **React.js**: React.JS Used for building the user interface and creating a responsive, dynamic experience.
 - **React Router DOM**: Handles seamless navigation between different pages in the app.
 - **Tailwind CSS**: Provides utility-first CSS for easy styling and a consistent look across devices.
 - **Swiper.js**: Enables smooth, touch-friendly carousels for showcasing popular foods and customer reviews.
