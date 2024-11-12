@@ -68,7 +68,6 @@ const PopularFoods = () => {
             delay: 500,
             disableOnInteraction: false,
           }}
-          slidesPerView={3}
           speed={1500}
           spaceBetween={30}
           breakpoints={{
