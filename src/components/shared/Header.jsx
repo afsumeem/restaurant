@@ -26,20 +26,24 @@ const Header = () => {
         scrolled ? styles.navbarBG : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1320px] mx-auto px-7 lg:px-0">
-        <div className="flex basis-1/5 items-center justify-between h-[80px]  w-full">
+      <div className="w-full lg:w-[90%] xl:w-[1320px] mx-auto px-[30px] lg:px-0 py-5 lg:py-[35.5px] h-[77px] lg:h-[108px] ">
+        <div className="flex basis-1/5 items-center justify-between  w-full">
           {/* logo */}
 
           <a href="/" className="flex items-center  gap-2 mr-[60px]">
-            <img src={logo} alt="" className="h-[37px] w-[37px]" />
-            <p className="text-[26px] sm:text-[28px] font-medium text-white-solid siteLogo">
-              Restau<span className="font-light">rant</span>
+            <img
+              src={logo}
+              className="h-[36.99px] w-[37.01px]"
+              alt="logo-img"
+            />
+            <p className="text-[28.44px] leading-[28.44px] font-semibold text-white-solid siteLogo">
+              Restau<span className="font-normal">rant</span>
             </p>
           </a>
 
           {/* nav items */}
           <div className="hidden basis-4/5  lg:flex justify-between space-x-8 items-center  ">
-            <div className="flex space-x-8">
+            <div className="flex space-x-10">
               <a href="/" className={styles.navigationLink}>
                 Home
               </a>
@@ -63,7 +67,7 @@ const Header = () => {
             <a href="#book-a-table">
               <button
                 onClick={() => setIsOpen(false)}
-                className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg"
+                className="w-[157px] h-[44px] py-[10px] px-6 text-base transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
               >
                 Book a Table
               </button>
@@ -138,7 +142,7 @@ const Header = () => {
               <a href="#book-a-table">
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg"
+                  className="w-[157px] h-[44px] py-[10px] px-6 text-base  transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg"
                 >
                   Book a Table
                 </button>

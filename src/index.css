@@ -48,7 +48,7 @@ button {
 /*  font-weight*/
 
 h4 {
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -57,9 +57,7 @@ h4 {
 button {
   background: rgba(254, 191, 0, 1);
   color: rgba(10, 20, 37, 1);
-  font-size: 16px;
-  padding: 10px 24px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 }
 

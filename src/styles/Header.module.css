@@ -6,6 +6,10 @@
 
 .navigationLink {
   position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.61px;
+  color: rgba(255, 255, 255, 1);
 }
 
 .navigationLink::after {

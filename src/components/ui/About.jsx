@@ -188,7 +188,7 @@ const About = () => {
                   </p>
                   {/* tab content footer */}
                   <div className="flex items-center space-x-4 md:space-x-8">
-                    <button className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg text-sm sm:text-base px-3 sm:px-6">
+                    <button className="w-[152.8px] h-[48.2px] py-[13.6px] px-[20.4px] lg:w-[180px] lg:h-[56px] lg:py-4 text-[15.3px] lg:text-lg lg:px-6 leading-[20.4px] mt-8 lg:mt-[38px] transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg">
                       Contact Us
                     </button>
                     <div className="flex items-center space-x-1 sm:space-x-2">
