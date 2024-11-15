@@ -26,11 +26,11 @@ const PopularFoods = () => {
       className={`${styles.popularFoodSection} h-full lg:h-[710px] py-[30px] lg:py-[120px] relative overflow-hidden`}
     >
       {/* section-bg */}
-      <div className="absolute -left-[370px] bottom-8 hidden lg:block">
+      <div className="absolute -left-[372px] bottom-[50px] hidden lg:block">
         <img
           src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731248634/restaurant/rsz_section-bg_yp23c5.png"
           alt="section-bg"
-          className="h-[490px] -rotate-[72deg]"
+          className="h-[492.04px] -rotate-[71.7deg] w-[526.31px]"
           style={{
             clipPath: "polygon(82% 51%, 8% 100%, 100% 100%)",
           }}
@@ -38,7 +38,7 @@ const PopularFoods = () => {
       </div>
 
       {/*  */}
-      <div className="w-full max-w-full lg:w-[90%] xl:w-[1320px] mx-auto px-7 lg:px-0 relative">
+      <div className="w-full lg:w-[90%] xl:w-[1320px] mx-auto px-[30px] lg:px-0 relative">
         {/* section title */}
 
         <div className="flex items-center justify-between mb-[30px] lg:mb-[60px]">
@@ -47,7 +47,7 @@ const PopularFoods = () => {
               Crispy, Every Bite Taste
             </p>
 
-            <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+            <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-2 lg:pt-4 font-bold uppercase ">
               POPULAR FOOD ITEMS
             </h3>
           </div>
@@ -69,7 +69,7 @@ const PopularFoods = () => {
             disableOnInteraction: false,
           }}
           speed={1500}
-          spaceBetween={30}
+          spaceBetween={32}
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -97,13 +97,13 @@ const PopularFoods = () => {
                 <img
                   src={food.image}
                   alt="food-image"
-                  className="mx-auto w-[186px] h-[124px]"
+                  className="mx-auto h-auto w-auto"
                 />
                 <div className=" w-[57px] mx-auto h-1 my-6 bg-border-focus"></div>
                 <h4 className="text-secondary-color text-2xl leading-9 text-center">
                   {food.title}
                 </h4>
-                <h5 className="text-center text-secondary-color text-base  leading-8 tracking-tighter">
+                <h5 className="text-center text-secondary-color text-base font-normal  leading-8 -tracking-[.15px]">
                   {food.subtitle}
                 </h5>
               </div>

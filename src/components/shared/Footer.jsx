@@ -23,7 +23,7 @@ const Footer = () => {
 
           {/* section content */}
           <div>
-            <div className="flex flex-col lg:flex-row justify-between gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/*  opening hours*/}
               <div className="text-center ">
                 <img
@@ -160,7 +160,7 @@ const Footer = () => {
               </div>
 
               {/* footer text */}
-              <p className="text-center text-white-solid mt-4 lg:mt-[25px] text-base lg:text-[21px] tracking-[.03em] font-light leading-[18.75px] lg:leading-[24.61]">
+              <p className="text-center text-white-solid mt-4 lg:mt-[25px] text-base lg:text-[21px] tracking-[.03em] font-light leading-[18.75px] lg:leading-[24.61px]">
                 © 2023 All Rights Reserved{" "}
               </p>
             </div>

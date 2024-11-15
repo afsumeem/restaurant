@@ -73,7 +73,7 @@ a {
 /* section subtitle style */
 .section-subtitle {
   color: rgba(189, 31, 23, 1);
-  font-weight: 600;
+  font-weight: 700;
 }
 .section-subtitle::before {
   content: "";
@@ -81,7 +81,7 @@ a {
   width: 10px;
   height: 10px;
   background-color: rgba(189, 31, 23, 1);
-  margin-right: 10px;
+  margin-right: 11px;
   margin-bottom: 3px;
   vertical-align: middle;
 }

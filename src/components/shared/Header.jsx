@@ -67,7 +67,7 @@ const Header = () => {
             <a href="#book-a-table">
               <button
                 onClick={() => setIsOpen(false)}
-                className="w-[157px] h-[44px] py-[10px] px-6 text-base transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+                className="w-[157px] h-[44px] py-[10px] px-6 text-base transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg text-center"
               >
                 Book a Table
               </button>
@@ -142,7 +142,7 @@ const Header = () => {
               <a href="#book-a-table">
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="w-[157px] h-[44px] py-[10px] px-6 text-base  transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg"
+                  className="w-[157px] h-[44px] py-[10px] px-6 text-base  transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg text-center"
                 >
                   Book a Table
                 </button>

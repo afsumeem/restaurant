@@ -13,28 +13,28 @@ const About = () => {
   const [activeTab, setActiveTab] = useState("about");
 
   return (
-    <div className="w-full h-auto lg:h-[864px] py-[30px] lg:py-[120px] relative overflow-hidden">
+    <div className="w-full h-auto lg:h-[864px] py-8 lg:py-[120px] relative overflow-hidden">
       {/* section-bg */}
-      <div className="absolute -right-[180px] lg:bottom-32 xl:bottom-28   hidden lg:block">
+      <div className="absolute -right-[180px] lg:bottom-32 xl:bottom-28  hidden lg:block">
         <img
           src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731248634/restaurant/rsz_section-bg_yp23c5.png"
           alt="section-bg"
-          className="h-[255px] -rotate-[24deg] "
+          className="h-[255.51px] w-[280.61px] -rotate-[24.95deg] "
           style={{
             clipPath: "polygon(0 0, 55% 0, 14% 100%, 0% 100%)",
           }}
         />
       </div>
 
-      <div className="w-full lg:w-[90%] xl:w-[1320px] mx-auto px-7 lg:px-0">
+      <div className="w-full lg:w-[90%] xl:w-[1320px] mx-auto px-[30px] lg:px-0">
         {/* tab */}
 
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[50] xl:gap-[78px] mb-[50px] lg:mb-[100px] xl:mb-[70px]">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[50] xl:gap-[79px] mb-[50px] lg:mb-[100px] xl:mb-[74px]">
           <div className="relative">
             <img
               src="https://res.cloudinary.com/dghf2lzu3/image/upload/v1731246751/restaurant/about_opijdn.png"
               alt="about-image"
-              className="w-full lg:w-[800px] xl:max-w-[700px] h-[246px] sm:h-[350px] md:h-[520px] lg:h-[400px] xl:h-[500px]"
+              className="w-full h-full md:h-[520px] lg:h-[400px] xl:w-[617px] xl:h-[460px]"
             />
             <div className="absolute top-[30px] left-6 bg-white-solid rounded-[20px] w-[128px] h-[73px] lg:w-[241px] lg:h-[136px] flex justify-between items-center gap-[5px] lg:gap-3 p-[11px] lg:p-[22px]">
               <div className="ml-[22px]">
@@ -65,16 +65,16 @@ const About = () => {
             </div>
           </div>
 
-          <div className=" mt-8">
+          <div className="w-full  xl:w-[624px] ">
             {/* Tab Buttons */}
-            <div className="flex justify-start space-x-3 sm:space-x-4 md:space-x-6 mb-6 border-b border-orange-tab">
+            <div className="flex justify-start space-x-3 sm:space-x-4 md:space-x-6 mb-8 border-b border-orange-tab w-full">
               {/* about btn */}
 
               <button
-                className={`py-[6px] px-4 text-[14px] capitalize ${
+                className={`w-[73px] h-[36px] lg:w-[70px] lg:h-9  py-[6px] px-4 text-sm leading-6 font-medium capitalize ${
                   activeTab === "about"
-                    ? "bg-orange-tab text-white-solid font-normal"
-                    : "bg-inherit text-dark-charcoal font-medium "
+                    ? "bg-orange-tab text-white-solid"
+                    : "bg-inherit text-dark-charcoal"
                 }`}
                 onClick={() => setActiveTab("about")}
               >
@@ -83,10 +83,10 @@ const About = () => {
 
               {/* experience btn */}
               <button
-                className={`py-[6px] px-4 text-[14px] capitalize ${
+                className={`h-9 w-[100px] py-[6px] px-4 text-sm leading-6 font-medium capitalize text-center ${
                   activeTab === "experience"
-                    ? "bg-orange-tab text-white-solid font-normal "
-                    : "bg-inherit text-dark-charcoal font-medium"
+                    ? "bg-orange-tab text-white-solid"
+                    : "bg-inherit text-dark-charcoal"
                 }`}
                 onClick={() => setActiveTab("experience")}
               >
@@ -95,10 +95,10 @@ const About = () => {
 
               {/* contact btn */}
               <button
-                className={`py-[6px] px-4 text-[14px] capitalize ${
+                className={`w-[85px] h-[36px] lg:w-[90px] lg:h-9  py-[6px] px-4 text-sm leading-6 font-medium capitalize text-center ${
                   activeTab === "contact"
-                    ? "bg-orange-tab text-white-solid font-normal "
-                    : "bg-inherit text-dark-charcoal font-medium"
+                    ? "bg-orange-tab text-white-solid"
+                    : "bg-inherit text-dark-charcoal"
                 }`}
                 onClick={() => setActiveTab("contact")}
               >
@@ -109,19 +109,20 @@ const About = () => {
             {/* Tab Content */}
             <div className="transition-opacity duration-300">
               {activeTab === "about" && (
-                <div className="animate-fadeIn">
-                  <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+                <div className="animate-fadeIn w-full">
+                  <h3 className="text-[40px] lg:text-[56px] xl:text-[62px] text-about-title leading-[48px] lg:leading-[62px] font-bold uppercase ">
                     Exceptional culinary experience and delicious food
                   </h3>
-                  <p className="text-dark-charcoal font-normal text-base w-full lg:w-[559px] leading-[26px] mt-6 mb-8">
-                    Our restaurant brings the essence of fine dining and a cozy
-                    atmosphere, where culinary art meets exceptional service.
-                    Each dish is crafted with locally-sourced ingredients and
-                    inspired by both traditional and contemporary recipes.
+                  <p className="text-dark-charcoal font-normal text-base  leading-[26px] mt-[18px] mb-8">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
+                    odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
+                    sit amet consectetur elit do eiusmod tempor incididunt ut
+                    labore et dolore magna minim veniam nostrud exercitation.
                   </p>
                   {/* tab content footer */}
                   <div className="flex items-center space-x-4 md:space-x-8">
-                    <button className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg text-sm sm:text-base px-3 sm:px-6">
+                    <button className="w-[149px] h-[48px] py-3 px-6 lg:w-[161px] lg:h-[56px] lg:py-4 text-base lg:text-lg lg:px-6 leading-6  transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg text-center flex items-center">
                       About More
                     </button>
                     <div className="flex items-center space-x-1 sm:space-x-2">
@@ -141,10 +142,10 @@ const About = () => {
               {/*  */}
               {activeTab === "experience" && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+                  <h3 className="text-[40px] lg:text-[56px] xl:text-[62px] text-about-title leading-[48px] lg:leading-[62px] font-bold uppercase ">
                     Our Culinary Journey
                   </h3>
-                  <p className="text-dark-charcoal font-normal text-base w-full lg:w-[559px] leading-[26px] mt-6 mb-8">
+                  <p className="text-dark-charcoal font-normal text-base  leading-[26px] mt-[18px] mb-8">
                     Experience the artistry and passion of our chefs, bringing
                     flavors from around the world to your plate. Each dish is
                     crafted with precision and care, providing a memorable
@@ -155,7 +156,7 @@ const About = () => {
                   </p>
                   {/* tab content footer */}
                   <div className="flex items-center space-x-4 md:space-x-8">
-                    <button className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg text-sm sm:text-base px-3 sm:px-6">
+                    <button className="w-[149px] h-[48px] py-3 px-6 lg:w-[161px] lg:h-[56px] lg:py-4 text-base lg:text-lg lg:px-6 leading-6  transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg text-center flex items-center">
                       Learn More
                     </button>
                     <div className="flex items-center space-x-1 sm:space-x-2">
@@ -175,10 +176,10 @@ const About = () => {
               {/*  */}
               {activeTab === "contact" && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-[40px] lg:text-[62px] text-about-title leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+                  <h3 className="text-[40px] lg:text-[56px] xl:text-[62px] text-about-title leading-[48px] lg:leading-[62px] font-bold uppercase ">
                     Get in Touch with Us
                   </h3>
-                  <p className="text-dark-charcoal font-normal text-base w-full lg:w-[559px] leading-[26px] mt-6 mb-8">
+                  <p className="text-dark-charcoal font-normal text-base  leading-[26px] mt-[18px] mb-8">
                     We’d love to hear from you! Whether you have questions about
                     our menu, reservations, or special events, our team is here
                     to help. Reach out to us and we’ll be in touch shortly. We’d
@@ -188,7 +189,7 @@ const About = () => {
                   </p>
                   {/* tab content footer */}
                   <div className="flex items-center space-x-4 md:space-x-8">
-                    <button className="w-[152.8px] h-[48.2px] py-[13.6px] px-[20.4px] lg:w-[180px] lg:h-[56px] lg:py-4 text-[15.3px] lg:text-lg lg:px-6 leading-[20.4px] mt-8 lg:mt-[38px] transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg">
+                    <button className="w-[149px] h-[48px] py-3 px-6 lg:w-[161px] lg:h-[56px] lg:py-4 text-base lg:text-lg lg:px-6 leading-6  transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg text-center flex items-center">
                       Contact Us
                     </button>
                     <div className="flex items-center space-x-1 sm:space-x-2">
@@ -218,7 +219,7 @@ const About = () => {
               <img
                 src={deliveryImg}
                 alt="fast-delivery-image"
-                className="h-[31px] w-[31px] lg:h-10 lg:w-10 bg-white-solid"
+                className="h-[31.11px] w-[31.11px] lg:h-10 lg:w-10 bg-white-solid"
               />
             </div>
             {/* section content */}
@@ -226,7 +227,7 @@ const About = () => {
               <h4 className="text-secondary-color text-2xl lg:text-[30px] leading-9">
                 Fast delivery
               </h4>
-              <h5 className="text-secondary-color text-lg lg:text-xl leading-8 tracking-tighter">
+              <h5 className="text-secondary-color text-lg lg:text-xl font-normal leading-[26px] lg:leading-8 -tracking-[.15px]">
                 Within 30 minutes
               </h5>
             </div>
@@ -239,7 +240,7 @@ const About = () => {
               <img
                 src={diningImg}
                 alt="absolute dining image"
-                className="h-[31px] w-[31px] lg:h-10 lg:w-10 bg-white-solid"
+                className="h-[31.11px] w-[31.11px] lg:h-10 lg:w-10 bg-white-solid"
               />
             </div>
             {/* section-content */}
@@ -247,7 +248,7 @@ const About = () => {
               <h4 className="text-secondary-color text-2xl lg:text-[30px] leading-9">
                 Absolute dining
               </h4>
-              <h5 className="text-secondary-color text-lg lg:text-xl leading-8 tracking-tighter">
+              <h5 className="text-secondary-color text-lg lg:text-xl font-normal leading-[26px] lg:leading-8 -tracking-[.15px]">
                 Best buffet restaurant
               </h5>
             </div>
@@ -260,7 +261,7 @@ const About = () => {
               <img
                 src={pickupImg}
                 alt="pickup delivery image"
-                className="h-[31px] w-[31px] lg:h-10 lg:w-10 bg-white-solid"
+                className="h-[31.11px] w-[31.11px] lg:h-10 lg:w-10 bg-white-solid"
               />
             </div>
             {/* section content */}
@@ -268,7 +269,7 @@ const About = () => {
               <h4 className="text-secondary-color text-2xl lg:text-[30px] leading-9">
                 Pickup delivery
               </h4>
-              <h5 className="text-secondary-color text-lg lg:text-xl leading-8 tracking-tighter">
+              <h5 className="text-secondary-color text-lg lg:text-xl font-normal leading-[26px] lg:leading-8 -tracking-[.15px]">
                 Grab your food order
               </h5>
             </div>

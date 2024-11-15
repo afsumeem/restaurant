@@ -98,21 +98,6 @@ const BookingForm = () => {
     e.preventDefault();
     if (!validate()) return;
 
-    //  check if the message box is empty
-    // if (!formData.message) {
-    //   const result = await Swal.fire({
-    //     title: "No message provided",
-    //     text: "Are you sure you want to submit the form without a message?",
-    //     icon: "warning",
-    //     showCancelButton: true,
-    //     confirmButtonText: "Yes, submit it",
-    //     cancelButtonText: "Cancel",
-    //   });
-
-    //   // if user cancel -return without submitting
-    //   if (!result.isConfirmed) return;
-    // }
-
     // Show alert
     Swal.fire({
       position: "center-center",
@@ -148,18 +133,18 @@ const BookingForm = () => {
   return (
     <div
       id="book-a-table"
-      className={`${styles.bookingFormSection} h-full lg:h-[788px] py-[30px] lg:py-[100px]`}
+      className={`${styles.bookingFormSection} h-full lg:h-[788px] py-[30px] lg:pt-[120px] lg:pb-[86px]`}
     >
-      <div className="w-full max-w-full lg:w-[90%] xl:w-[1320px] mx-auto px-7 lg:px-0 relative">
+      <div className="w-full max-w-full lg:w-[90%] xl:w-[1320px] mx-auto px-[30px] lg:px-0 relative">
         {/* section title */}
-        <div className="mb-6 lg:mb-10">
+        <div className="mb-10">
           <p className="section-subtitle text-base lg:text-xl leading-[26px] lg:leading-8">
             Book Now
           </p>
-          <h3 className="text-[40px] lg:text-[62px] text-white-solid leading-[48px] lg:leading-[62px] pt-0 lg:pt-5 font-medium uppercase ">
+          <h3 className="text-[40px] lg:text-[62px] text-white-solid leading-[48px] lg:leading-[62px] pt-2 lg:pt-4 font-bold uppercase ">
             Book Your Table
           </h3>
-          <p className="text-base text-footer-text mt-4 font-light leading-6 w-full lg:w-[545px]">
+          <p className="text-base text-footer-text mt-2 lg:mt-4 font-normal leading-6 w-full lg:w-[545px]">
             Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo
             molestie vel, ornare non id blandit netus.
           </p>
@@ -178,7 +163,7 @@ const BookingForm = () => {
                   onChange={handleChange}
                   // required
                   placeholder="Your Name *"
-                  className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
+                  className="border border-white-border bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid focus:placeholder-gray-400 outline-none w-full h-full lg:w-[302.5px] lg:h-[46px] font-normal text-sm leading-[22px]"
                 />{" "}
                 {errors.name && (
                   <p className="text-orange-tab text-sm mt-1">{errors.name}</p>
@@ -193,7 +178,7 @@ const BookingForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your Email"
-                  className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
+                  className="border border-white-border bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid focus:placeholder-gray-400 outline-none w-full h-full lg:w-[302.5px] lg:h-[46px] font-normal text-sm leading-[22px]"
                 />{" "}
                 {errors.email && (
                   <p className="text-orange-tab text-sm mt-1">{errors.email}</p>
@@ -212,14 +197,14 @@ const BookingForm = () => {
                     value={formData.date}
                     onChange={handleChange}
                     placeholder="Reservation Date"
-                    className="border border-white-border w-full bg-inherit py-3 px-4 caret-white-solid outline-none text-white-solid appearance-none custom-date-input"
+                    className="border border-white-border bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid focus:placeholder-gray-400 outline-none w-full h-full lg:w-[302.5px] lg:h-[46px] font-normal text-sm leading-[22px] appearance-none custom-date-input"
                   />
 
                   <span className="absolute right-5 top-1/2 transform -translate-y-1/2 pointer-events-none">
                     <img
                       src={calender}
                       alt="Calendar Icon"
-                      className="w-5 h-5 "
+                      className="w-[16.67px] h-[15.83px] "
                     />
                   </span>
                 </div>
@@ -238,7 +223,7 @@ const BookingForm = () => {
                     value={formData.people}
                     onChange={handleChange}
                     placeholder="Total People"
-                    className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid placeholder-white-solid caret-white-solid outline-none"
+                    className="border border-white-border bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid focus:placeholder-gray-400 outline-none w-full h-full lg:w-[302.5px] lg:h-[46px] font-normal text-sm leading-[22px]"
                     min="1"
                   />
                   {/* Up and down icons */}
@@ -274,14 +259,14 @@ const BookingForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Message"
-                className="border border-white-border w-full bg-inherit py-3 px-4 text-white-solid  placeholder-white-solid  caret-white-solid  focus:placeholder-gray-400 outline-none"
+                className="border border-white-border bg-inherit py-3 px-4 text-white-solid placeholder-white-solid  caret-white-solid focus:placeholder-gray-400 outline-none w-full lg:w-[635px] h-[140px] font-normal text-sm leading-[22px]"
               ></textarea>
             </div>
 
             {/* book now btn */}
             <button
               type="submit"
-              className="transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg mt-6 lg:mt-8"
+              className="w-[123px] h-[48px] py-[11px] px-5 lg:w-[142px] lg:h-[56px] lg:py-4 text-base lg:text-lg lg:px-6 leading-[26px] lg:leading-6 transition duration-300 ease-in-out transform  hover:scale-105 hover:shadow-lg text-center mt-6 lg:mt-8"
             >
               Book Now
             </button>
