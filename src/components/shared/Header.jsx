@@ -27,7 +27,7 @@ const Header = () => {
       }`}
     >
       <div className="w-full lg:w-[90%] xl:w-[1320px] mx-auto px-[30px] lg:px-0 py-5 lg:py-[35.5px] h-[77px] lg:h-[108px] ">
-        <div className="flex basis-1/5 items-center justify-between  w-full">
+        <div className="flex basis-1/5 items-center justify-between  w-full h-[37px]">
           {/* logo */}
 
           <a href="/" className="flex items-center  gap-2 mr-[60px]">
@@ -43,7 +43,7 @@ const Header = () => {
 
           {/* nav items */}
           <div className="hidden basis-4/5  lg:flex justify-between space-x-8 items-center  ">
-            <div className="flex space-x-10">
+            <div className="flex space-x-10 items-center">
               <a href="/" className={styles.navigationLink}>
                 Home
               </a>
